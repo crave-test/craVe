@@ -1,0 +1,577 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Chicken. Chicken. Chicken.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>craVe guest</title>
+    <link rel="icon" type="image/png" href="../images/android-chrome-circle-192x192.png" sizes="192x192">
+    <!-- Page styles -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../loading.css">
+    <link rel="stylesheet" href="../fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../footer-distributed.css">
+    <link rel="stylesheet" href="guestbrowse.css">
+    
+    <!--script src="https://use.fontawesome.com/f69157360e.js"></script--> <!--Font icons from fontawesome, has 605+ icons so use allot!! -->
+    <script src="../jquery-3.1.0.min.js"></script>
+    <script src="../jquery-ui.min.js"></script>
+
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script-->
+    <!--script  src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script-->
+    <script src="../code.js"></script>
+    <script src="guestbrowse.js"></script>
+
+    <style>
+        html{font-family: Roboto !important;}
+        body{background: #121315;}
+    </style>
+
+</head>
+<body>
+    <header class="header">
+        <div id="nav" class="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-nav">
+            <ul>
+                <li><a class="active" href="guestbrowse.html">Browse</a></li>
+                <li><a href="guestcart.html">Cart</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+        </div>
+        <a href="../index.html"><img src="../images/logo_transparent_thick.png" class="header-logo"></a>
+        <form id="search-bar">
+            <input type="search" placeholder="Search">
+        </form>
+    </header>
+
+    <div id="tab-bar">
+        <ul id="tabs">
+            <li><a id="filters-button" href="#">Filters</a></li>
+            <li><a id="nearby-button" class="active" href="#">Nearby</a></li>
+            <li><a id="map-button" href="#">Map</a></li>
+        </ul>
+    </div>
+
+    <div id="filters-page">
+        <h1 id="filter-title">Filters</h1>
+        <div class="filter-box">
+            <h2 class="filter-name">Delivery?</h2>
+            <p class="filter-description">Choose whether or not the restaurant delivers</p>
+            <form class="filter-form">
+                <label><input type="radio" name="filter1" value="small"> <span>Yes</span> </label>
+                <label><input type="radio" name="filter1" value="medium"> <span>No</span> </label>
+            </form>
+        </div>
+        <div class="filter-box">
+            <h2 class="filter-name">Price Range</h2>
+            <p class="filter-description">Choose the restaurant price range</p>
+            <form class="filter-form">
+                <label>
+                    <input type="checkbox" name="filter3" value="small"> 
+                    <span>
+                        <i style="color:#fdfdfd;" class="fa fa-usd"></i>
+                        <i style="color:#222327;" class="fa fa-usd"></i>
+                        <i style="color:#222327;" class="fa fa-usd"></i>
+                        <i style="color:#222327;" class="fa fa-usd"></i>
+                        <i style="color:#222327;" class="fa fa-usd"></i>
+                    </span> 
+                </label>
+                <label>
+                    <input type="checkbox" name="filter3" value="small"> 
+                    <span>
+                        <i style="color:#fdfdfd;" class="fa fa-usd"></i>
+                        <i style="color:#fdfdfd;" class="fa fa-usd"></i>
+                        <i style="color:#222327;" class="fa fa-usd"></i>
+                        <i style="color:#222327;" class="fa fa-usd"></i>
+                        <i style="color:#222327;" class="fa fa-usd"></i>
+                    </span> 
+                </label>
+                <label>
+                    <input type="checkbox" name="filter3" value="small"> 
+                    <span>
+                        <i style="color:#fdfdfd;" class="fa fa-usd"></i>
+                        <i style="color:#fdfdfd;" class="fa fa-usd"></i>
+                        <i style="color:#fdfdfd;" class="fa fa-usd"></i>
+                        <i style="color:#222327;" class="fa fa-usd"></i>
+                        <i style="color:#222327;" class="fa fa-usd"></i>
+                    </span> 
+                </label>
+                <label>
+                    <input type="checkbox" name="filter3" value="small"> 
+                    <span>
+                        <i style="color:#fdfdfd;" class="fa fa-usd"></i>
+                        <i style="color:#fdfdfd;" class="fa fa-usd"></i>
+                        <i style="color:#fdfdfd;" class="fa fa-usd"></i>
+                        <i style="color:#fdfdfd;" class="fa fa-usd"></i>
+                        <i style="color:#222327;" class="fa fa-usd"></i>
+                    </span> 
+                </label>
+                <label>
+                    <input type="checkbox" name="filter3" value="small"> 
+                    <span>
+                        <i style="color:#fdfdfd;" class="fa fa-usd"></i>
+                        <i style="color:#fdfdfd;" class="fa fa-usd"></i>
+                        <i style="color:#fdfdfd;" class="fa fa-usd"></i>
+                        <i style="color:#fdfdfd;" class="fa fa-usd"></i>
+                        <i style="color:#fdfdfd;" class="fa fa-usd"></i>
+                    </span> 
+                </label>
+            </form>
+        </div>
+        <div class="filter-box">
+            <h2 class="filter-name">Rating</h2>
+            <p class="filter-description">Choose the restaurant rating</p>
+            <form class="filter-form">
+                <label>
+                    <input type="checkbox" name="filter2" value="small"> 
+                    <span><div class="star-ratings-sprite "><span style="width:20%" class="star-ratings-sprite-rating"></span></div></span>
+                </label>
+                <label>
+                    <input type="checkbox" name="filter2" value="small"> 
+                    <span>
+                        <div class="star-ratings-sprite "><span style="width:40%" class="star-ratings-sprite-rating"></span></div>
+                    </span>
+                </label>
+                <label>
+                    <input type="checkbox" name="filter2" value="small">
+                    <span>
+                        <div class="star-ratings-sprite "><span style="width:60%" class="star-ratings-sprite-rating"></span></div>
+                    </span>
+                </label>
+                <label>
+                    <input type="checkbox" name="filter2" value="small"> 
+                    <span>
+                        <div class="star-ratings-sprite "><span style="width:80%" class="star-ratings-sprite-rating"></span></div>
+                    </span>
+                </label>
+                <label>
+                    <input type="checkbox" name="filter2" value="small"> 
+                    <span>
+                        <div class="star-ratings-sprite "><span style="width:100%" class="star-ratings-sprite-rating"></span></div>
+                    </span>
+                </label>
+            </form>
+        </div>
+        <div class="filter-box">
+            <h2 class="filter-name">Cuisines</h2>
+            <p class="filter-description">Choose what type of food you feel like eating</p>
+            <form class="filter-form">
+                <label><input type="checkbox" name="filter1" value="small"> <span>Chinese</span> </label>
+                <label><input type="checkbox" name="filter1" value="medium"> <span>Indian</span> </label>
+                <label><input type="checkbox" name="filter1" value="large"> <span>American</span> </label>
+                <label><input type="checkbox" name="filter1" value="small"> <span>Soul</span> </label>
+                <label><input type="checkbox" name="filter1" value="medium"> <span>Korean</span> </label>
+                <label><input type="checkbox" name="filter1" value="large"> <span>Mexican</span> </label>
+                <label><input type="checkbox" name="filter1" value="small"> <span>Cuban</span> </label>
+                <label><input type="checkbox" name="filter1" value="medium"> <span>Spanish</span> </label>
+                <label><input type="checkbox" name="filter1" value="large"> <span>French</span> </label>
+            </form>
+        </div>
+        <div class="filter-box">
+            <h2 class="filter-name">Catering?</h2>
+            <p class="filter-description">Choose whether or not the restaurant caters</p>
+            <form class="filter-form">
+                <label><input type="radio" name="filter6" value="small"> <span>Yes</span> </label>
+                <label><input type="radio" name="filter6" value="medium"> <span>No</span> </label>
+            </form>
+        </div>
+    </div>
+
+    <div id="nearby-page">
+        <ul>
+            <li>
+            <div class="restaurant-box">
+                <div class="profile-photo"></div>
+                <!--div class="text-box"></div-->
+                <div class="distance">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i><span> 1.1 MI<span>
+                </div>
+                <div class="address"><span>Cary Park Town Center</span></div>
+            </div>
+            <h3>McDonald's</h3>
+            </li>
+
+            <li>
+            <div class="restaurant-box">
+                <div class="profile-photo"></div>
+                <div class="distance">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i><span> 1.3 MI<span>
+                </div>
+                <div class="address"><span>Morrisville Carpenter Rd</span></div>
+            </div>
+            <h3>Taco Bell</h3>
+            </li>
+
+            <li>
+            <div class="restaurant-box">
+                <div class="profile-photo"></div>
+                <!--div class="text-box"></div-->
+                <div class="distance">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i><span> 2.1 MI<span>
+                </div>
+                <div class="address"><span>High House Crossing</span></div>
+            </div>
+            <h3>Burger King</h3>
+            </li>
+
+            <li>
+            <div class="restaurant-box">
+                <div class="profile-photo"></div>
+                <!--div class="text-box"></div-->
+                <div class="distance">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i><span> 3.5 MI<span>
+                </div>
+                <div class="address"><span>Cary Park Town Center</span></div>
+            </div>
+            <h3>Subway</h3>
+            </li>
+            <li>
+            <div class="restaurant-box">
+                <div class="profile-photo"></div>
+                <!--div class="text-box"></div-->
+                <div class="distance">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i><span> 4.7 MI<span>
+                </div>
+                <div class="address"><span>Park West Village</span></div>
+            </div>
+            <h3>Chipotle</h3>
+            </li>
+
+            <li>
+            <div class="restaurant-box">
+                <div class="profile-photo"></div>
+                <!--div class="text-box"></div-->
+                <div class="distance">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i><span> 5.2 MI<span>
+                </div>
+                <div class="address"><span>SE Maynard Rd</span></div>
+            </div>
+            <h3>Macaroni Grill</h3>
+            </li>
+
+            <li>
+            <div class="restaurant-box">
+                <div class="profile-photo"></div>
+                <!--div class="text-box"></div-->
+                <div class="distance">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i><span> 7.6 MI<span>
+                </div>
+                <div class="address"><span>Cary Towne Center</span></div>
+            </div>
+            <h3>Pei Wei</h3>
+            </li>
+
+            <li>
+            <div class="restaurant-box">
+                <div class="profile-photo"></div>
+                <!--div class="text-box"></div-->
+                <div class="distance">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i><span> 13.2 MI<span>
+                </div>
+                <div class="address"><span>NC Hwy 55</span></div>
+            </div>
+            <h3>Dunkin Donuts</h3>
+            </li>
+            <li>
+            <div class="restaurant-box">
+                <div class="profile-photo"></div>
+                <!--div class="text-box"></div-->
+                <div class="distance">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i><span> 14.7 MI<span>
+                </div>
+                <div class="address"><span>Address Geo Tag</span></div>
+            </div>
+            <h3>Restaurant Name</h3>
+            </li>
+
+            <li>
+            <div class="restaurant-box">
+                <div class="profile-photo"></div>
+                <!--div class="text-box"></div-->
+                <div class="distance">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i><span> 14.7 MI<span>
+                </div>
+                <div class="address"><span>Address Geo Tag</span></div>
+            </div>
+            <h3>Restaurant Name</h3>
+            </li>
+
+            <li>
+            <div class="restaurant-box">
+                <div class="profile-photo"></div>
+                <!--div class="text-box"></div-->
+                <div class="distance">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i><span> 14.7 MI<span>
+                </div>
+                <div class="address"><span>Address Geo Tag</span></div>
+            </div>
+            <h3>Restaurant Name</h3>
+            </li>
+
+            <li>
+            <div class="restaurant-box">
+                <div class="profile-photo"></div>
+                <!--div class="text-box"></div-->
+                <div class="distance">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i><span> 14.7 MI<span>
+                </div>
+                <div class="address"><span>Address Geo Tag</span></div>
+            </div>
+            <h3>Restaurant Name</h3>
+            </li>
+            
+        </ul>
+    </div>
+
+    <div id="backfade" class="overlay"></div>
+    <div id="restaurant-page" class="side-section">
+        <div id="side-rollback-icon"class="nav-icon open">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="background-box">
+            <div id="profile-box"></div>
+            <h3 class="mobile">Restaurant Name</h3>
+            <a class="mobile" href="tel:1-847-555-5555">1-847-555-5555</a>
+            <span class="distance mobile"><i class="fa fa-map-marker" aria-hidden="true"></i> 1.1 MI</span> 
+
+            <!--div id="star-rating" class="star-ratings-sprite mobile"><span style="width:72%" class="star-ratings-sprite-rating"></span></div>
+
+            <div id="price-range" class="mobile"><i style="color:#fdfdfd;" class="fa fa-usd"></i><i style="color:#fdfdfd;" class="fa fa-usd"></i><i style="color:#222327;" class="fa fa-usd"></i><i style="color:#222327;" class="fa fa-usd"><i style="color:#222327;" class="fa fa-usd"></i></i></div>
+
+            <span class="hours mobile">Open 7:00 AM to 11:00 PM</span--> 
+
+        </div>
+        <h3 class="pc">Restaurant Name</h3>
+        <a class="pc" href="tel:1-847-555-5555">1-847-555-5555</a> 
+        <p class="pc">11010 Lake Grove Blvd #102, Morrisville, NC 27560, USA</p>
+
+        <p class="address mobile">11010 Lake Grove Blvd #102, Morrisville, NC 27560, USA</p>
+        <p class="points mobile">10 points</p>
+
+        <div id="star-rating" class="star-ratings-sprite pc"><span style="width:72%" class="star-ratings-sprite-rating"></span></div>
+        <div id="price-range" class="pc"><i style="color:#fdfdfd;" class="fa fa-usd"></i><i style="color:#fdfdfd;" class="fa fa-usd"></i><i style="color:#222327;" class="fa fa-usd"></i><i style="color:#222327;" class="fa fa-usd"><i style="color:#222327;" class="fa fa-usd"></i></i></div>
+
+        <span class="pc">Open 7:00 AM to 11:00 PM</span> 
+        <span class="distance pc"><i class="fa fa-map-marker" aria-hidden="true"></i> 1.1 MI</span>
+
+        <div id = "divider"></div>
+
+        <ul id="side-tabs">
+            <li id="menu-tab" class="btn active">Menu</li>
+            <li id="rewards-tab" class="btn">Rewards</li>
+            <li id="deals-tab" class="btn">Deals</li>
+        </ul>
+
+        <ul id="categories">
+            <li>
+                <div class="head">
+                    <span>Pizza</span>
+                    <i class="fa fa-chevron-down"></i>
+                </div>
+                <ul class="items">
+                    <li>
+                        <img class="item-picture" src='../images/foodpics/pizza.png'>
+                        <h3 class='title'>Supreme</h3>
+                        <p class='price'>$15.99</p><br/><br/>
+                        <p class='description'>Classic marinara sauce, authentic old-world pepperoni, seasoned pork, beef, fresh mushrooms, fresh green bell peppers and fresh red onions.</p>
+                        <button class="add"><i class="fa fa-cart-plus"></i></button>
+                    </li>
+                    <li>
+                        <img class="item-picture" src='../images/foodpics/basilpizza.jpg'>
+                        <h3 class='title'>Meat Lover's</h3>
+                        <p class='price'>$15.99</p><br/><br/>
+                        <p class='description'>Classic marinara sauce, authentic old-world pepperoni, all-natural Italian sausage, roasted ham, smoked bacon, seasoned pork and beef.</p> <!-- 20 Word Limit!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+                        <button class="add"><i class="fa fa-cart-plus"></i></button>
+                    </li>
+                    <li>
+                        <img class="item-picture" src='../images/foodpics/pizza.png'>
+                        <h3 class='title'>Bacon Spinach Alfredo</h3>
+                        <p class='price'>$15.99</p><br/><br/>
+                        <p class='description'>Garlic Parmesan sauce, bacon, mushrooms and spinach—flavored with a salted pretzel crust edge and balsamic sauce drizzle.</p>
+                        <button class="add"><i class="fa fa-cart-plus"></i></button>
+                    </li>
+                    <li>
+                        <h3 class='title'>Secret Menu Pizza</h3>
+                        <p class='price'>$15.99</p><br/><br/>
+                        <button class="add"><i class="fa fa-cart-plus"></i></button>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="head">
+                    <span>Pasta</span>
+                    <i class="fa fa-chevron-down"></i>
+                </div>
+                <ul class="items">
+                    <li>Chicken</li>
+                    <li>Hola</li>
+                </ul>
+            </li>
+            <li><div class="head"><span>Wings</span><i class="fa fa-chevron-down"></i></div></li>
+            <li><div class="head"><span>Deals</span><i class="fa fa-chevron-down"></i></div></li>
+            <li><div class="head"><span>5 Dollar Flavor Menu</span><i class="fa fa-chevron-down"></i></div></li>
+            <li><div class="head"><span>Sides</span><i class="fa fa-chevron-down"></i></div></li>
+            <li><div class="head"><span>Drinks</span><i class="fa fa-chevron-down"></i></div></li>
+            <li><div class="head"><span>Desserts</span><i class="fa fa-chevron-down"></i></div></li>
+        </ul>
+        <ul id="rewards">
+            <li><div><span class="reward-value">5 pts</span><span class="reward-name">Bla bla bla bla bla bla bl</span><button>Redeem Offer</button></div></li>
+
+            <li><div><span class="reward-value">10 pts</span><span class="reward-name">Bla bla bla bla bla bla bl</span><button>Redeem Offer</button></div></li>
+
+            <li><div><span class="reward-value inactive">15 pts</span><span class="reward-name">Bla bla bla bla bla bla bl</span><button class="inactive">Redeem Offer</button></div></li>
+
+            <li><div><span class="reward-value inactive">25 pts</span><span class="reward-name">Bla bla bla bla bla bla bl</span><button class="inactive">Redeem Offer</button></div></li>
+
+            <li><div><span class="reward-value inactive">125 pts</span><span class="reward-name">Bla bla bla bla bla bla bl</span><button class="inactive">Redeem Offer</button></div></li>
+        </ul>
+        <ul id="deals">
+            <li><div><span class="reward-name">Bla bla bla bla bla bla bl</span><button>Redeem Offer</button></div></li>
+
+            <li><div><span class="reward-name">Bla bla bla bla bla bla bl</span><button>Redeem Offer</button></div></li>
+
+            <li><div><span class="reward-name">Bla bla bla bla bla bla bl</span><button class="inactive">Redeem Offer</button></div></li>
+
+            <li><div><span class="reward-name">Bla bla bla bla bla bla bl</span><button class="inactive">Redeem Offer</button></div></li>
+
+            <li><div><span class="reward-name">Bla bla bla bla bla bla bl</span><button class="inactive">Redeem Offer</button></div></li>
+        </ul>
+
+    </div>
+    <form action="guestcart.html" onSubmit="setTimeout(1000)"><button type="submit" id="cart-fab" class="fab-btn"><i class="fa fa-cart-plus"></i></button></form>
+    <div id="fade">
+        <div id="order-box">
+            <div style="height: 90%; position: absolute; top: 0%; width: 100%; overflow-y: auto;">
+                <div id="order-box-icon"class="nav-icon open">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <img id="itempic" class="item-picture" src='../images/foodpics/noodles.png'>
+                <h2 id="itemtit" class="title">Bacon Spinach Alfredo</h2>
+                <p class='price'>$15.99</p><br class="pc"/><br class="pc"/><br class="pc"/><br class="pc"/>
+                <p id = "up" class="thumb-rating"><i class="fa fa-thumbs-o-up"></i> <span class="amount">1523</span> <i class="fa fa-angle-up"></i> </p><br class="pc"><br class="pc">
+                <p id = "down" class="thumb-rating"><i class="fa fa-thumbs-o-down"></i> <span class="amount">22</span> <i class="fa fa-angle-down"></i> </p><br class="pc"><br class="pc">
+                <p class="description">Classic marinara sauce, authentic old-world pepperoni, seasoned pork, beef, fresh mushrooms, fresh green bell peppers and fresh red onions.</p>
+                <div class="option-box">
+                    <h3 class="option-name">Choose a Side</h3>
+                    <p class="option-description">Required - Choose 1</p>
+                    <form class="option-form">
+                        <label><input type="radio" name="option1" value="small"> <span>Small</span> </label>
+                        <label><input type="radio" name="option1" value="medium"> <span>Medium</span> </label>
+                        <label><input type="radio" name="option1" value="large" checked> <span>Large</span> </label>
+                    </form>
+                </div>
+                <div class="option-box">
+                    <h3 class="option-name">Choose Toppings</h3>
+                    <p class="option-description">Required - Choose 3 (Additional Charge for Extra Toppings)</p>
+                    <form class="option-form">
+                        <label><input type="checkbox" name="option2" value="1"> <span>Tomatoes</span></label>
+                        <label><input type="checkbox" name="option2" value="2"> <span>Green Peppers</span></label>
+                        <label><input type="checkbox" name="option2" value="3"> <span>Mushrooms</span></label>
+                        <label><input type="checkbox" name="option2" value="4"> <span>Chicken</span></label>
+                        <label><input type="checkbox" name="option2" value="5"> <span>Shredded Beef</span></label>
+                        <label><input type="checkbox" name="option2" value="6"> <span>Mozerella Cheese</span></label>
+                        <label><input type="checkbox" name="option2" value="7"> <span>Italian Meatballs</span></label>
+                        <label><input type="checkbox" name="option2" value="8"> <span>Onions</span></label>
+                        <label><input type="checkbox" name="option2" value="9"> <span>Extra Cheese</span></label>
+                    </form>
+                </div>
+                <div class="option-box">
+                    <h3 class="option-name">Special Instructions</h3>
+                    <textarea placeholder="Don't like olives? Want the sauce on the side? Put special order instructions here, additional charges may apply..."></textarea>
+                </div>
+            </div>
+            <div id="order-bottom-line"></div>
+            <div id="order-bottom">
+                <button class="btn cart-button">Add to cart: $15.99</button>
+                <button id="minus" class="amount-btn inactive"><i class="fa fa-minus"></i></button> 
+                <p class="numberOf">1</p>
+                <button id="plus" class="amount-btn"><i class="fa fa-plus"></i></button>
+            </div>
+
+        </div>
+    </div>
+    
+    <div id="map-page">
+        <div id="map">
+            <script src="https://maps.googleapis.com/maps/api/js"></script>
+            <script>
+                function initMap() {
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        center: {lat: -34.397, lng: 150.644},
+                        zoom: 6
+                    });
+                    var infoWindow = new google.maps.InfoWindow({map: map});
+
+                    // Try HTML5 geolocation.
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(function(position) {
+                            var pos = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude
+                            };
+
+                            infoWindow.setPosition(pos);
+                            infoWindow.setContent('Location found.');
+                            map.setCenter(pos);
+                        }, function() {
+                        handleLocationError(true, infoWindow, map.getCenter());
+                        });
+                    } else {
+                    // Browser doesn't support Geolocation
+                    handleLocationError(false, infoWindow, map.getCenter());
+                    }
+                }
+
+                function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+                    infoWindow.setPosition(pos);
+                    infoWindow.setContent(browserHasGeolocation ?
+                                        'Error: The Geolocation service failed.' :
+                                        'Error: Your browser doesn\'t support geolocation.');
+                }
+                initMap();
+            </script>
+        </div>
+    </div> 
+
+    
+    <footer class="footer-distributed">
+        <div class="footer-right">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-pinterest"></i></a>
+        </div>
+        <div class="footer-left">
+            <p class="footer-links">
+                <a href="#">About</a>
+                ·
+                <a href="#">Partners</a>
+                ·
+                <a href="#">Restaurants</a>
+                ·
+                <a href="#">Contact</a>
+                ·
+                <a href="#">Terms</a>
+                ·
+                <a href="#">Privacy</a>
+            </p>
+            <p><span style="color:#00efda;">craVe</span> &copy; 2016</p>
+        </div>
+    </footer>
+</body>
+</html>

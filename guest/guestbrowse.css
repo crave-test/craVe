@@ -1,0 +1,1649 @@
+/*SEARCH BAR*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    #search-bar{
+      position: absolute;
+      right: 2%;
+      top: 25%;
+    }
+    @media only screen and (max-device-width: 320px){#search-bar{top: 15%;}}
+
+    input {
+      outline: none;
+    }
+    input[type=search] {
+      -webkit-appearance: textfield;
+      -webkit-box-sizing: content-box;
+      font-family: inherit;
+      font-size: 100%;
+    }
+    input::-webkit-search-decoration,
+    input::-webkit-search-cancel-button {
+      display: none; 
+    }
+    input[type=search] {
+      /*http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png*/
+      background:  url('../images/search_white.png') no-repeat 9px center;
+      border: solid 2px #fdfdfd;
+      padding: 9px 10px 9px 10px;
+      
+      width: 15px;
+      color: transparent;
+      cursor: pointer;
+
+      -webkit-border-radius: 10em;
+      -moz-border-radius: 10em;
+      border-radius: 10em;
+      
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      transition: all .5s;
+    }
+    input[type=search]:hover {
+      background:  url('../images/search_black.png') no-repeat 9px center;
+      background-color: #fdfdfd;
+    }
+    input[type=search]:focus {
+      width: 130px;
+      padding-left: 32px;
+      color: #000;
+      background:  url('../images/search_black.png') no-repeat 9px center;
+      background-color: #fdfdfd;
+      cursor: auto;
+      border-color: #00efda;
+      
+      -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+      -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+      box-shadow: 0 0 5px rgba(109,207,246,.5);
+      
+    }
+    input:-moz-placeholder {
+      color: transparent;
+    }
+    input::-webkit-input-placeholder {
+      color: transparent;
+    }
+
+/*Hamburger Menu Page*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*TABS*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+        #tab-bar{
+          position: absolute;
+          top: 100px;
+          width: 100%;
+          text-align: center;
+        }
+        #tabs{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        #tabs li{
+            display: inline-block;
+            margin-left: 1%;
+            margin-right: 1%;
+            
+        }
+        #tabs li a{
+            display: inline-block; /*Makes it so I can style width property*/
+            text-decoration: none;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #fdfdfd;
+            border: 2px solid #fdfdfd;
+            border-radius: 24px;
+            padding: 9.5px 22px;
+            width: 70px;
+            background: none;
+            cursor: pointer;
+            -webkit-transition: .2s ease-in-out;
+            -ms-transition: .2s ease-in-out;
+            -moz-transition: .2s ease-in-out;
+            -o-transition: .2s ease-in-out;
+        }
+        #tabs li a:hover{
+            background: #fdfdfd;
+            color: black;
+        }
+        #tabs li .active{
+            background: #fdfdfd;
+            color: black;
+        }
+        @media only screen and (max-width: 800px){#tab-bar{top: 12vh;}}
+        @media only screen and (max-width: 414px){
+            #tabs li a{
+                width: 50px;
+                font-size: .77em;
+                letter-spacing: initial;
+            }
+        }
+        @media only screen and (max-width: 375px){
+            #tabs li a{
+                width: 40px;
+                font-size: .69em;
+            }
+        }
+/*Filters*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+  #filters-page{
+    min-height: 100%;
+    width: 100%;
+    background: #121315;
+    display: none;
+    text-align: center;
+  }
+  #filter-title{
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 2.4em;
+    color: #fdfdfd;
+    display: inline-block;
+    margin-top: 13%;
+    margin-bottom: 2%;
+  }
+  .filter-box{
+    margin: 0 auto;
+    min-height: 100px;
+    border: 2px dashed #fdfdfd;
+    position: relative;
+  }
+  .filter-name{
+    color: #fdfdfd;
+    background: #121315;
+    font-weight: 300;
+    font-family: Roboto;
+  }
+  .filter-description{
+    color: #fdfdfd;
+    font-size: 0.9em;
+    margin: 0%;
+    opacity: 0.8;
+    font-style: italic;
+  }
+      .filter-form label{
+        display: inline-block;
+        cursor: pointer;
+        color: #fdfdfd;
+        font-style: Roboto;
+      }
+
+       .filter-form input[type="radio"]{
+        border: 0; 
+        clip: rect(0 0 0 0); 
+        height: 1px; margin: -1px; 
+        overflow: hidden; 
+        padding: 0; 
+        position: absolute; 
+        width: 1px;
+      }
+
+      .filter-form input[type="radio"] + span {
+        display: block;
+      }
+
+      .filter-form input[type="radio"] + span:before {
+        content: '';
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.25em;
+        border-radius: 1em;
+        border: 2px solid #fdfdfd;
+        margin-right: 0.75em;
+      }
+      .filter-form label:active input[type="radio"] + span:before{
+        background: #00efda;
+        -webkit-transform: scale3d(0.9, 0.9, 1);
+      }
+      .filter-form input[type="radio"]:checked + span:before {
+        background: #00efda;
+        width: 0.7em;
+        height: 0.7em;
+        border-radius: 0.7em;
+        border: 4px solid #121315;
+        box-shadow: 0 0 0 2px #00efda;  
+      }
+
+      .filter-form input[type="checkbox"]{
+        border: 0; 
+        clip: rect(0 0 0 0); 
+        height: 1px; margin: -1px; 
+        overflow: hidden; 
+        padding: 0; 
+        position: absolute; 
+        width: 1px;
+      }
+
+      .filter-form input[type="checkbox"] + span {
+        display: block;
+      }
+
+      .filter-form input[type="checkbox"] + span:before {
+        content: '';
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.25em;
+        border-radius: 0.15em;
+        border: 2px solid #fdfdfd;
+        margin-right: 0.75em;
+      }
+      .filter-form label:active input[type="checkbox"] + span:before{
+        background: #00efda;
+        -webkit-transform: scale3d(0.9, 0.9, 1);
+      }
+      .filter-form input[type="checkbox"]:checked + span:before {
+        background: #00efda;
+        width: 0.7em;
+        height: 0.7em;
+        border: 4px solid #121315;
+        box-shadow: 0 0 0 2px #00efda;
+      }
+  @media only screen and (min-device-width: 801px){
+    #filter-title{
+      margin-top: 13%;
+      margin-bottom: 2%;
+    }
+    .filter-box{
+      width: 50%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      border-radius: 0.8em;
+    }
+      .filter-name{
+        margin: -3% 33% 0% 33%;
+        padding: 0px 5px;
+        width: 34%;
+        font-size: 2em;
+      }
+      .filter-form label{
+        margin: 3% 1%;
+        width: 30%;
+      }
+  }
+  @media only screen and (max-device-width: 800px){}
+  @media only screen and (max-device-width: 599px){
+    #filter-title{
+      margin-top: 20vh;
+      margin-bottom: 1%;
+    }
+    .filter-box{
+      width: 90%;
+      margin-top: 2vh;
+      margin-bottom: 2vh;
+      border-radius: 1em;
+    }
+    .filter-name{
+      margin: -4% 28% 0% 28%;
+      padding: 0px 5px;
+      width: 44%;
+      font-size: 1.5em;
+    }
+    .filter-form label{
+      margin: 3% 0%;
+      width: 100%;
+    }
+  }
+    
+/*Nearby*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+  #nearby-page{
+    /*background: #1c1b20;*/
+    /*background: #222327*/
+    background: #121315;
+    text-align: center;
+    min-height: 100%;
+    width: 100%;
+  }
+  #nearby-page ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+    margin-top: 30vh;
+  }
+  #nearby-page ul li{
+    display: inline-block;
+    margin: 0vw 1.5vw 5vw 1.5vw;
+    overflow: hidden;
+
+      -webkit-transition: width 10s, height 10s, margin 10s;
+      -moz-transition: width 10s, height 10s, margin 10s;
+      -ms-transition: width 10s, height 10s, margin 10s;
+      transition: width 10s, height 10s, margin 10s;
+  }
+  #nearby-page ul li .restaurant-box{
+    width: 16.5vw;
+    height: 16.5vw;
+    margin: 1vw 1vw 1vw 1vw;
+    border: 2px solid #fdfdfd;
+    background: rgba(0,0,0,0.1);
+    border-radius: 3vw;
+    text-align: center;
+    cursor: pointer;
+  }
+  #nearby-page ul li .profile-photo{
+    width: 35%;
+    height: 35%;
+    border-radius: 75%;
+    position: relative;
+    transform: translateY(88%);
+    display: inline-block;
+    border: 2px solid #fdfdfd;
+    background-color: #fdfdfd;
+  }
+  #nearby-page ul li .distance{
+    color: #fdfdfd;
+    position: relative;
+    top: -35%;
+    left: 26%;
+    margin: 0;
+  }
+  #nearby-page ul li .restaurant-box span{font-size: 0.8em;}
+  #nearby-page ul li h3{margin:0vw;color: #fdfdfd;}
+  #nearby-page ul li .address{
+    position: relative;
+    top: 27%;
+    color:#fdfdfd;
+  }
+  /*#nearby-page ul li .address span{font-size: 0.8em;}*/
+  /*#nearby-page ul li .distance span{font-size: 0.8em;}*/
+
+  /*/////////////////////////////////////////////*/
+  #nearby-page ul li:first-child .restaurant-box{
+    background: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../images/mcdonaldsBackground.jpg') center / cover;
+  }
+  #nearby-page ul li:first-child .profile-photo{
+    background: url('../images/mcdonalds.jpg') no-repeat center / cover;
+  }
+
+  #nearby-page ul li:nth-child(2) .restaurant-box{
+    background: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../images/tacobellBackground.jpg') center / cover;
+  }
+  #nearby-page ul li:nth-child(2) .profile-photo{
+    background: url('../images/tacobell.jpg') no-repeat center / cover;
+  }
+
+  #nearby-page ul li:nth-child(3) .restaurant-box{
+    background: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../images/burgerkingBackground.jpg') center / cover;
+  }
+  #nearby-page ul li:nth-child(3) .profile-photo{
+    background: url('../images/burgerking.jpg') no-repeat center / cover;
+  }
+
+  #nearby-page ul li:nth-child(4) .restaurant-box{
+    background: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../images/subwayBackground.jpg') center / cover;
+  }
+  #nearby-page ul li:nth-child(4) .profile-photo{
+    background: url('../images/subway.jpg') no-repeat center / cover;
+  }
+
+  #nearby-page ul li:nth-child(5) .restaurant-box{
+    background: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../images/chipotleBackground.jpg') center / cover;
+  }
+  #nearby-page ul li:nth-child(5) .profile-photo{
+    background: url('../images/chipotle.jpg') no-repeat center / cover;
+  }
+
+  #nearby-page ul li:nth-child(6) .restaurant-box{
+    background: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../images/macaronigrillBackground.jpg') center / cover;
+  }
+  #nearby-page ul li:nth-child(6) .profile-photo{
+    background: url('../images/macaronigrill.jpg') no-repeat center / cover;
+  }
+
+  #nearby-page ul li:nth-child(7) .restaurant-box{
+    background: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../images/peiweiBackground.jpg') center / cover;
+  }
+  #nearby-page ul li:nth-child(7) .profile-photo{
+    background: url('../images/peiwei.jpg') no-repeat center / cover;
+  }
+
+  #nearby-page ul li:nth-child(8) .restaurant-box{
+    background: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../images/dunkindonutsBackground.jpg') center / cover;
+  }
+  #nearby-page ul li:nth-child(8) .profile-photo{
+    background: url('../images/dunkindonuts.jpg') no-repeat center / cover;
+  }
+
+  /*/////////////////////////////////////////////*/
+  #nearby-page ul li:hover{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  #nearby-page ul li:hover .restaurant-box{
+    box-shadow: 0px 0px 20px 0px rgba(0, 239, 218, 0.6);
+  }
+  #nearby-page ul li:active{
+    -webkit-transform: scale3d(0.99, 0.99, 1);
+    -webkit-transform: scale3d(0.99, 0.99, 1);
+  }
+  @media only screen and (max-width: 801px){
+      #nearby-page ul{margin-top: 18vh;}
+      #nearby-page ul li .restaurant-box{
+        width: 35.7vw;
+        height: 35.7vw;
+        border-radius: 2.3em;
+      }
+      #nearby-page ul li .restaurant-box span{font-size: 1.4em;}
+      #nearby-page ul li:active{
+        -webkit-transform: scale3d(0.9, 0.9, 1);
+        -webkit-transform: scale3d(0.9, 0.9, 1);
+      }
+  }
+  @media only screen and (max-width: 601px){
+    #nearby-page ul li .restaurant-box span{font-size: 1.06em;}
+  }
+  @media only screen and (max-width: 600px){
+    #nearby-page ul{margin-top: 25vh;}
+    #nearby-page ul li .restaurant-box{
+      /*width: 35.7vw;
+      height: 35.7vw;*/
+      width: 75.7vw;
+      height: 75.7vw;
+      border-radius: 1.7em;
+    }
+    #nearby-page ul li .restaurant-box span{font-size: .7em;}
+    #nearby-page ul li h3{font-size: 1.5em;}
+  }
+  @media only screen and (max-width: 500px){
+    #nearby-page ul li .restaurant-box{
+      width: 35.7vw;
+      height: 35.7vw;
+      border-radius: 1.7em;
+    }
+  }
+  @media only screen and (max-width: 414px){
+    #nearby-page ul li .address{top: 30%;}
+    #nearby-page ul li .restaurant-box span{font-size: 1.17em;}
+    #nearby-page ul li .restaurant-box{
+      width: 75.7vw;
+      height: 75.7vw;
+      border-radius: 1.7em;
+    } 
+    #nearby-page ul li .distance{left: 30%;}
+  }
+  @media only screen and (max-width: 374px){
+    #nearby-page ul li .restaurant-box span{font-size: 0.95em;}
+  }
+
+/*Restaurant Page*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+  .overlay{
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      background: black;
+      opacity: .6;
+      -webkit-transition: .01s ease-in-out;
+      -ms-transition: .01s ease-in-out;
+      -moz-transition: .01s ease-in-out;
+      -o-transition: .01s ease-in-out;
+  }
+  .side-section {
+      position: fixed;
+      top: 0;
+      right: -80%;
+      width: 80%;
+      height: calc(100% - 4px);
+      background: #121315;
+      z-index: 5;
+      border: 2px solid #fdfdfd;
+      border-right: none;
+      border-radius: 3vw 0vw 0vw 3vw;
+      /*box-shadow: -5px 0 5px -5px #000;*/
+      
+      -webkit-transition: .4s ease-in-out;
+      -ms-transition: .4s ease-in-out;
+      -moz-transition: .4s ease-in-out;
+      -o-transition: .4s ease-in-out;
+  }
+  .rollout.overlay{
+      -webkit-transform: translate(-100%,0);
+      -moz-transform: translate(-100%,0);
+      -o-transform: translate(-100%,0);
+      -ms-transform: translate(-100%,0);
+      transform: translate(-100%,0);
+  }
+
+  .rollout.side-section{
+      -webkit-transform: translate(-100%,0);
+      -moz-transform: translate(-100%,0);
+      -o-transform: translate(-100%,0);
+      -ms-transform: translate(-100%,0);
+      transform: translate(-100%,0);
+  }
+
+  .rollback.overlay{
+     -webkit-transform: translate(100%,0);
+      -moz-transform: translate(100%,0);
+      -o-transform: translate(100%,0);
+      -ms-transform: translate(100%,0);
+      transform: translate(100%,0);
+  }
+
+  .rollback.side-section{
+    -webkit-transform: translate(100%,0);
+      -moz-transform: translate(100%,0);
+      -o-transform: translate(100%,0);
+      -ms-transform: translate(100%,0);
+      transform: translate(100%,0);        
+  }
+  #backfade{z-index: 4;}
+  #restaurant-page{
+    color: #fdfdfd;
+    overflow-y: scroll;
+  }
+  #restaurant-page .nav-icon{
+    position: fixed;
+    z-index: 5;
+    top: 2vh;
+    left: 2vh;
+    display: none;
+  }
+
+  #cart-fab{
+    position: fixed;
+    z-index: 6;
+    bottom: 2vh;
+    right: 3vh;
+    background-color: #00efda;
+    color: #fdfdfd;
+  }
+  @media only screen and (max-device-width: 599px){
+    .side-section{
+      width: calc(100% - 3px);
+      right: -100%;
+      border-radius: 1.7em 0em 0em 1.7em;
+    }
+
+    #restaurant-page .nav-icon{
+      left: 2%;
+    }
+  }
+
+  #background-box{
+    background: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../images/mcdonaldsBackground.jpg') center / cover;
+      text-align: center;
+  }
+  #profile-box{
+    background: url('../images/mcdonalds.jpg') no-repeat center / cover;
+  }
+
+  #restaurant-page #price-range{
+    height: 20px;
+    width: 100px;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #restaurant-page #price-range i{
+    margin: 0px 4.28px 0px 4.28px;
+  }
+  #restaurant-page #divider{
+      height: 1.25px;
+      background-color: #222327;
+      margin: 0 auto;
+  }
+
+  #restaurant-page #side-tabs{
+    padding: 0;
+    text-align: center;
+    list-style-type: none;
+  }
+  #restaurant-page #side-tabs li{
+    display: inline-block;
+    width: 85px;
+    font-size: 1em;
+    margin: 0% 1%;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: Roboto;
+    padding: 9.5px 22px;
+    
+  }
+  #restaurant-page #side-tabs li.active{
+    background-color: #fdfdfd;
+    color: black;
+  }
+
+  /*Categories//////////////////////////////////////////////////*/
+    #restaurant-page #categories{
+      margin: 2% 0%;
+      padding: 0;
+      list-style-type: none;
+    }
+    #restaurant-page #categories li{
+      margin: 0 auto;
+      border-radius: 0.5em;
+      background-color: transparent;
+    }
+    #restaurant-page #categories li .head{
+      background-color: #222327;
+      padding: 12px 22px;
+      border-radius: 0.5em;
+      cursor: pointer;
+    }
+    #restaurant-page #categories li i{
+      float: right;
+    }
+    #restaurant-page .items{
+      padding: 0;
+      list-style-type: none;
+      display: none;
+      text-align: center;
+    }
+    #restaurant-page #categories li .items li{
+      display: inline-block;
+      margin: 1vw 0.5vw;
+      background-color: transparent;
+      border-radius: 0.5em;
+      position: relative;
+      cursor: pointer;
+    }
+    #restaurant-page #categories li .items li .item-picture{
+      height: 90px;
+      width: auto;
+      margin: 5px 0px;
+      border-radius: 0.75em;
+      float: left;
+      display: inline-block;
+    }
+    #restaurant-page #categories li .items li .title{
+      margin: 0.5vw 0vw 0vw 0.5vw;
+      padding: 0;
+      float: left;
+      font-size: 1em;
+    }
+    #restaurant-page #categories li .items li .description{
+      font-size: .7em;
+      padding: 0;
+      margin: -0.5vw 0vw 0vw 0.5vw;
+      float: left;
+      width: 55%;
+      text-align: initial;
+      font-style: italic;
+      opacity: 0.8;
+    }
+    #restaurant-page #categories li .items li .price{
+      float: right;
+      margin: 0.5vw 0.5vw 0vw 0vw;
+    }
+    #restaurant-page #categories li .items li .add{
+      position: absolute;
+      bottom: 0.5vw;
+      right: 0.5vw;
+      border-radius: 0.3em;
+      border: 2px solid #fdfdfd;
+      background: transparent;
+      color: #fdfdfd;
+      font-size: 1.5em;
+      padding: 3px 12px 3px 10px;
+      cursor: pointer;
+      outline: none;
+    }
+    #restaurant-page #categories li .items li .add:hover,   #restaurant-page #categories li .items li:hover .add{
+      background-color: #00efda;
+      border-color: #00efda;
+      color: #fdfdfd;
+    }
+    #restaurant-page #categories li .items li .add:active,   #restaurant-page #categories li .items li:active .add{
+      -webkit-transform: scale3d(0.9, 0.9, 1);
+    }
+    #restaurant-page #categories li .items li i{
+      float: none;
+      margin: 0 auto;
+    }
+
+  /*Rewards/////////////////////////////////////////////*/
+    #restaurant-page #rewards, #restaurant-page #deals{
+      margin: 2% 0%;
+      padding: 0;
+      list-style-type: none;
+      display: none;
+    }
+    #restaurant-page #rewards li, #restaurant-page #deals li{
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 3%;
+      border-radius: 0.5em;
+      background-color: transparent; 
+    }
+    #restaurant-page #rewards li div, #restaurant-page #deals li div{
+      height: 50px;
+      border-radius: 0.5em;
+      cursor: pointer;
+      position: relative;
+    }
+
+    #restaurant-page #rewards li div:before, #restaurant-page #deals li div:before{
+        content: '';
+        display: block;
+        width: 80%;
+        height: 50px;
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    #restaurant-page #rewards li div .reward-value, #restaurant-page #deals li div .reward-value{
+      float: left;
+      margin: 0%;
+      
+      border: 2px solid #00f610; 
+      color: #00f610;
+      border-radius: 0.5em;
+      position: relative;
+    }
+    #restaurant-page #rewards li div .reward-value.inactive, #restaurant-page #deals li div .reward-value.inactive{
+      border-color: #ff1025; /*The opposite of craVe*/
+      color: #ff1025;
+    }
+    #restaurant-page #rewards li div:hover .reward-value, #restaurant-page #rewards li div .reward-value:hover, #restaurant-page #deals li div:hover .reward-value, #restaurant-page #deals li div .reward-value:hover{
+      background: #00f610;
+      color: #fdfdfd;
+    }
+    #restaurant-page #rewards li div:hover .reward-value.inactive, #restaurant-page #rewards li div .reward-value.inactive:hover, #restaurant-page #deals li div:hover .reward-value.inactive, #restaurant-page #deals li div .reward-value.inactive:hover{
+      background: #ff1025;
+    }
+    #restaurant-page #rewards li div .reward-name, #restaurant-page #deals li div .reward-name{
+      float: left;
+      font-size: 1em;
+      margin-left: 2%;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    #restaurant-page #rewards li div button, #restaurant-page #deals li div button{
+      
+      height: 100%;
+      border-radius: 0.5em;
+      border: 2px solid #fdfdfd;
+      float: right;
+      margin: 0%;
+      background: transparent;
+      color: #fdfdfd;
+      cursor: pointer;
+      outline: none;
+      position: relative;
+    }
+    #restaurant-page #rewards li div button.inactive, #restaurant-page #deals li div button.inactive{
+      border-color: #ccc;
+      color: #ccc;
+      opacity: 0.6;
+    }
+    #restaurant-page #rewards li div:hover button:not(.inactive), #restaurant-page #deals li div:hover button:not(.inactive){
+      background: #fdfdfd;
+      color: black;
+    }
+    #restaurant-page #rewards li div:active button:not(.inactive), #restaurant-page #rewards li div:active .reward-value:not(.inactive), #restaurant-page #deals li div:active button:not(.inactive), #restaurant-page #deals li div:active .reward-value:not(.inactive){
+      -webkit-transform: scale3d(0.9, 0.9, 1);
+    }
+
+  @media only screen and (min-device-width: 801px){
+    #background-box{
+      width: 13.5vw;
+      height: 13.5vw;
+      border: 2px solid #fdfdfd;
+      border-radius: 2vw;
+      margin-top: 7vh;
+      margin-left: 7vh;
+      display: inline-block;
+    }
+    #profile-box{
+      width: 35%;
+      height: 35%;
+      border-radius: 75%;
+      position: relative;
+      display: inline-block;
+      border: 2px solid #fdfdfd;
+      background-color: #fdfdfd;
+
+       -webkit-transform: translateY(82%);
+      -moz-transform: translateY(82%);
+      -o-transform: translateY(82%);
+      -ms-transform: translateY(82%);
+      transform: translateY(82%); 
+    }
+    #restaurant-page .mobile{display: none;}
+    #restaurant-page h3.pc{
+      margin-top: -17%;
+      margin-left: 24%;
+      margin-bottom: 0%;
+      width: 21%;
+    }
+    #restaurant-page a.pc{
+      color: #fdfdfd;
+      margin-top: 0%;
+      margin-left: 24%;
+      margin-bottom: 0%;
+      width: 20%;
+    }
+    #restaurant-page p.pc{
+      margin-left: 24%;
+      margin-top: 2%;
+      width: 18%;
+      text-align: initial;
+    } 
+    #restaurant-page #star-rating.pc{
+      position: absolute;
+      top: 8%;
+      left: 45%;
+    }
+    #restaurant-page #price-range.pc{
+      position: absolute;
+      top: 16%;
+      left: 45%;
+    }
+    #restaurant-page #price-range.pc i{
+      margin-top: 5px;
+    }
+    #restaurant-page span.pc{
+      position: absolute;
+      top: 8%;
+      left: 60%;
+    }
+    #restaurant-page span.distance.pc{
+      position: absolute;
+      top: 18%;
+      left: 60%;
+    }
+    #restaurant-page #divider{
+      width: 90%;
+      margin-top: 7%;
+    }
+    #restaurant-page #side-tabs{
+      margin-top: 2%;
+      
+    }
+      /* Categories/Menu Page ///////////////*/
+    #restaurant-page #categories li{
+      margin-bottom: 1%;
+      width: 80%;
+    }
+    #restaurant-page .items{
+      margin: 0%;
+    }
+    #restaurant-page #categories li .items li{
+      width: 47%;
+      height: 100px;
+    }
+
+    /*Rewards Tab////////////////*/
+    #restaurant-page #rewards, #restaurant-page #deals{
+      margin: 2% 0%;
+    }
+    #restaurant-page #rewards li, #restaurant-page #deals li{
+      width: 80%;
+      margin-bottom: 3%;
+    }
+    #restaurant-page #rewards li div, #restaurant-page #deals li div{
+      height: 50px;
+    }
+
+    #restaurant-page #rewards li div:before, #restaurant-page #deals li div:before{
+        content: '';
+        display: block;
+        width: 80%;
+        height: 50px;
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    #restaurant-page #rewards li div .reward-value, #restaurant-page #deals li div .reward-value{
+      margin: 0%;
+      padding: 12px 22px;
+    }
+    #restaurant-page #rewards li div .reward-value.inactive, #restaurant-page #deals li div .reward-value.inactive{
+
+    }
+    #restaurant-page #rewards li div:hover .reward-value, #restaurant-page #rewards li div .reward-value:hover, #restaurant-page #deals li div:hover .reward-value, #restaurant-page #deals li div .reward-value:hover{
+    }
+    #restaurant-page #rewards li div:hover .reward-value.inactive, #restaurant-page #rewards li div .reward-value.inactive:hover, #restaurant-page #deals li div:hover .reward-value.inactive, #restaurant-page #deals li div .reward-value.inactive:hover{
+    }
+    #restaurant-page #rewards li div .reward-name, #restaurant-page #deals li div .reward-name{
+      font-size: 1em;
+      margin-left: 2%;
+
+    }
+    #restaurant-page #rewards li div button, #restaurant-page #deals li div button{
+      font-size: 1em;
+      padding: 12px 22px;
+    }
+    #restaurant-page #rewards li div button.inactive, #restaurant-page #deals li div button.inactive{
+    }
+    #restaurant-page #rewards li div:hover button:not(.inactive), #restaurant-page #deals li div:hover button:not(.inactive){
+    }
+    #restaurant-page #rewards li div:active button:not(.inactive), #restaurant-page #rewards li div:active .reward-value:not(.inactive), #restaurant-page #deals li div:active button:not(.inactive), #restaurant-page #deals li div:active .reward-value:not(.inactive){
+    }
+  }
+
+  @media only screen and (max-device-width: 800px){
+    #background-box{
+      width: 31vw;
+      height: 31vw;
+      border: 2px solid #fdfdfd;
+      border-radius: 4vw;
+      margin-top: 5vh;
+      margin-left: 5vh;
+      display: inline-block;
+    }
+    #profile-box{
+      width: 35%;
+      height: 35%;
+      border-radius: 75%;
+      position: relative;
+      display: inline-block;
+      border: 2px solid #fdfdfd;
+      background-color: #fdfdfd;
+      -webkit-transform: translateY(82%);
+      -moz-transform: translateY(82%);
+      -o-transform: translateY(82%);
+      -ms-transform: translateY(82%);
+      transform: translateY(82%); 
+    }
+    #restaurant-page .mobile{display: none;}
+    #restaurant-page h3.pc{
+      margin-left: 55%;
+      margin-top: -39%; 
+      margin-bottom: 0%;
+    }
+    #restaurant-page a.pc{
+      font-family: Roboto;
+      color: #fdfdfd;
+      margin-left: 55%;
+      margin-top: 0%;
+    }
+    #restaurant-page p.pc{
+      margin-left: 55%;
+      margin-top: 2%;
+      width: 28%;
+      text-align: initial;   
+    }
+
+  }
+  @media only screen and (max-device-width: 599px){
+    #background-box{
+      width: calc(100vw - 3px);
+      height: 60vw;
+      border: none;
+      border-bottom: 2px solid #fdfdfd;
+      border-radius: 1.7em 0em 1.7em 1.7em;
+      margin: 0vh;
+      position: relative;
+    }
+    #profile-box{
+      display: inline-block;
+      border: 2px solid #fdfdfd;
+      width: 15vh;
+      height: 15vh;
+      border-radius: 20vh;
+      -webkit-transform: translateY(60%);
+      -moz-transform: translateY(60%);
+      -o-transform: translateY(60%);
+      -ms-transform: translateY(60%);
+      transform: translateY(60%); 
+    }
+    #restaurant-page .pc{display: none;}
+
+    #restaurant-page h3.mobile{
+      display: block;
+      position: relative;
+      margin-top: 17%;
+      margin-bottom: 0%;
+    }
+    #restaurant-page a.mobile{
+      color: #fdfdfd;
+      font-family: Roboto;
+      display: block;
+      margin-top: 1%;
+    }
+    #restaurant-page span.distance.mobile{
+      position: absolute;
+      display: inline-block;
+      top: 3vh;
+      right: 2vh;
+    }
+    #restaurant-page #star-rating.mobile{
+      position: absolute;
+      display: inline-block;
+      top: 50%;
+      left: 2%;
+    }
+    #restaurant-page #price-range.mobile{
+      position: absolute;
+      display: inline-block;
+      top: 50%;
+      right: 2%;
+    }
+    #restaurant-page span.hours.mobile{
+      position: absolute;
+      display: inline-block;
+      top: 3vh;
+      left: calc(3vh + 32.5px);
+    }
+    #restaurant-page p.address.mobile{
+      display: inline-block;
+      margin-left: 4%;
+      width: 60%;
+      padding-right: 2%;
+      border-right: 1px solid #ccc;
+    }
+    #restaurant-page p.points.mobile{
+      display: inline-block;
+      font-size: 1.45em;
+      width: 32%;
+      text-align: center;
+      position: relative;
+      top: 50%;
+      transform: translateY(-30%);
+    }
+    #restaurant-page #divider{
+      width: 80%;
+    }
+
+    #restuarant-page #side-tabs{
+      margin-top: 4%;
+    }
+    #restaurant-page #side-tabs li{
+      width: 49px;
+      margin: 0% 0.5%;
+      font-size: .72em;
+      letter-spacing: initial;
+      padding: 9px 22px;
+    }
+
+    #restaurant-page #categories li{
+      margin-bottom: 2%;
+      width: 98%;
+    }
+    #restaurant-page .items{
+      margin: 2%;
+    }
+    #restaurant-page #categories li .items li{
+      width: 100%;
+      min-height: 75px;
+      position: relative;
+    }
+     #restaurant-page #categories li .items li .title{
+      margin-left: 2px;
+    }
+     #restaurant-page #categories li .items li .description{
+      margin-left: 2px;
+    }
+    /*Rewards Tab//////////*/
+    #restaurant-page #rewards, #restaurant-page #deals{
+      margin: 2% 0%;
+    }
+    #restaurant-page #rewards li, #restaurant-page #deals li{
+      width: 90%;
+      margin-bottom: 5%;
+    }
+    #restaurant-page #rewards li div, #restaurant-page #deals li div{
+      position: relative;
+    }
+
+    #restaurant-page #rewards li div:before, #restaurant-page #deals li div:before{
+        width: 80%;
+        height: 50px;
+        top: 20%;
+        left: 10%;
+    }
+    
+    #restaurant-page #rewards li div .reward-value, #restaurant-page #deals li div .reward-value{
+      font-size: 0.8em;
+      width: 17%;
+      height: 34px;
+      line-height: 34px;
+      text-align: center;
+      margin: 8px 0px;
+    }
+    #restaurant-page #rewards li div .reward-value.inactive, #restaurant-page #deals li div .reward-value.inactive{
+
+    }
+    #restaurant-page #rewards li div:hover .reward-value, #restaurant-page #deals li div .reward-value:hover, #restaurant-page #deals li div .reward-value.inactive{
+    }
+    #restaurant-page #rewards li div:hover .reward-value.inactive, #restaurant-page #rewards li div .reward-value.inactive:hover, #restaurant-page #deals li div:hover .reward-value.inactive, #restaurant-page #deals li div .reward-value.inactive:hover{
+    }
+    #restaurant-page #rewards li div .reward-name, #restaurant-page #deals li div .reward-name{
+      font-size: 0.8em;
+      margin-left: 2%;
+      margin-right: 1%;
+      width: 45%;
+    }
+    #restaurant-page #rewards li div button, #restaurant-page #deals li div button{
+      font-size: 0.8em;
+      height: 100%;
+      margin: 0%;
+      width: 35%;
+      position: absolute;
+      right: 0%;
+      top: 0%;
+    }
+    #restaurant-page #rewards li div button.inactive, #restaurant-page #deals li div button.inactive{
+    }
+    #restaurant-page #rewards li div:hover button:not(.inactive), #restaurant-page #deals li div:hover button:not(.inactive){
+    }
+    #restaurant-page #rewards li div:active button:not(.inactive), #restaurant-page #rewards li div:active .reward-value:not(.inactive), #restaurant-page #deals li div:active button:not(.inactive), #restaurant-page #deals li div:active .reward-value:not(.inactive){
+    }
+  }
+
+
+/*Order Form*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+  #fade{
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+  }
+    #order-box{
+      z-index: 7;
+      display: inline-block;
+      overflow-y: auto;
+      overflow-x: hidden;
+      background: #121315;
+      border: 2px solid #fdfdfd;
+      border-radius: 3vw;
+
+      position: relative;
+      top: 50%;
+      -webkit-transform: perspective(1px) translateY(-50%);
+        -moz-transform: perspective(1px) translateY(-50%);
+        -o-transform: perspective(1px) translateY(-50%);
+        -ms-transform: perspective(1px) translateY(-50%);
+        transform: perspective(1px) translateY(-50%);
+    }
+    #order-box .nav-icon{
+      position: fixed;
+      z-index: 7;
+    }
+    #order-box .title{
+      color: #fdfdfd;
+    }
+    #order-box .price{
+      color: #fdfdfd;
+      font-family: Roboto;
+      font-size: 1.35em;
+    }
+    .thumb-rating{
+      display: inline-block;
+      color: #fdfdfd;
+      cursor: pointer;
+    }
+    #order-box .description{
+      color: #fdfdfd;
+      text-align: initial;
+      margin: 2vw 3.5vw 0vw 3.5vw;
+    }
+    #order-box .option-box{
+      width: 86%;
+      margin: 5% 7%;
+      min-height: 100px;
+      border: 2px dashed #fdfdfd;
+      border-radius: 0.8em;
+      position: relative;
+    }
+    #order-box .option-name{
+      color: #fdfdfd;
+      background: #121315;
+    }
+    #order-box .option-description{
+      color: #fdfdfd;
+      font-size: 0.8em;
+      margin: 0%;
+      opacity: 0.8;
+      font-style: italic;
+    }
+
+    #order-box .option-form label{
+      display: inline-block;
+      cursor: pointer;
+      color: #fdfdfd;
+      font-style: Roboto;
+    }
+
+    #order-box .option-form input[type="radio"]{
+      border: 0; 
+      clip: rect(0 0 0 0); 
+      height: 1px; margin: -1px; 
+      overflow: hidden; 
+      padding: 0; 
+      position: absolute; 
+      width: 1px;
+    }
+
+    #order-box .option-form input[type="radio"] + span {
+      display: block;
+    }
+
+    #order-box .option-form input[type="radio"] + span:before {
+      content: '';
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.25em;
+      border-radius: 1em;
+      border: 2px solid #fdfdfd;
+      margin-right: 0.75em;
+    }
+    #order-box .option-form label:active input[type="radio"] + span:before{
+      background: #00efda;
+      -webkit-transform: scale3d(0.9, 0.9, 1);
+    }
+    #order-box .option-form input[type="radio"]:checked + span:before {
+      background: #00efda;
+      width: 0.7em;
+      height: 0.7em;
+      border-radius: 0.7em;
+      border: 4px solid #121315;
+      box-shadow: 0 0 0 2px #00efda;  
+    }
+
+
+    #order-box .option-form input[type="checkbox"]{
+      border: 0; 
+      clip: rect(0 0 0 0); 
+      height: 1px; margin: -1px; 
+      overflow: hidden; 
+      padding: 0; 
+      position: absolute; 
+      width: 1px;
+    }
+
+    #order-box .option-form input[type="checkbox"] + span {
+      display: block;
+    }
+
+    #order-box .option-form input[type="checkbox"] + span:before {
+      content: '';
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.25em;
+      border-radius: 0.15em;
+      border: 2px solid #fdfdfd;
+      margin-right: 0.75em;
+    }
+    #order-box .option-form label:active input[type="checkbox"] + span:before{
+      background: #00efda;
+      -webkit-transform: scale3d(0.9, 0.9, 1);
+    }
+    #order-box .option-form input[type="checkbox"]:checked + span:before {
+      background: #00efda;
+      width: 0.7em;
+      height: 0.7em;
+      border: 4px solid #121315;
+      box-shadow: 0 0 0 2px #00efda;
+    }
+    #order-box textarea{
+      background: transparent;
+      width: 90%;
+      height: 90px;
+      color: #fdfdfd;
+      font-family: Roboto;
+      font-size: 1em;
+      outline: none;
+      border: none;
+    }
+    #order-bottom-line{
+      width: 90%;
+      height: 1px;
+      background-color: #ccc;
+      position: fixed;
+      bottom: 10%;
+      margin: 0% 5%;
+    }
+    #order-bottom{
+      width: 100%;
+      height: 10%;
+      position: fixed;
+      bottom: 0%;
+      border-radius: 0vw 0vw 3vw 3vw;
+      background-color: #121315;
+    }
+    #order-bottom .cart-button{
+      background: transparent;
+      border: 2px solid #fdfdfd;
+      color: #fdfdfd;
+      float: right;
+      margin-right: 3%;
+      display: inline;
+      outline: 0;
+      
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-family: Roboto;
+    }
+    #minus{
+      position: absolute;
+      bottom: 15%;
+      left: 4%;
+      margin: 0%;
+    }
+    #plus{
+      float: left;
+    }
+    #order-bottom .amount-btn{
+      
+      display: inline-block;
+      color: white;
+      outline: 0;
+      float: left;
+      background: transparent;
+      border: 2px solid #fdfdfd;
+      border-radius: 0.5em;
+    }
+    #order-bottom .amount-btn.inactive, #order-bottom .cart-button.inactive{
+      border-color: #ccc;
+      color: #ccc;
+      opacity: 0.6;
+      cursor: auto;
+    }
+    #order-bottom .amount-btn.inactive:active, #order-bottom .cart-button.inactive:active{
+      border-color: #ccc;
+      background-color: transparent;
+      color: #ccc;
+      opacity: 0.6;
+      cursor: auto;
+    }
+    #order-bottom .numberOf{
+      display: inline-block;
+      font-size: 1em;
+      color: #fdfdfd;
+      border: 2px solid #fdfdfd;
+      border-radius: 0.5em;
+      float: left;
+    }
+    #order-bottom .amount-btn:not(.inactive):active{
+      border-color: #00efda;
+      background-color: #00efda;
+      color: #fdfdfd;
+      -webkit-transform: scale3d(0.9, 0.9, 1);
+    }
+
+  @media only screen and (min-device-width: 801px){
+    .mobile{
+      display: none;
+    }
+    #order-box{
+      width: 50vw;
+      height: 37.5vw;
+    }
+    #order-box .nav-icon{
+      top: 2vh;
+      left: 2vh;
+    }
+    #order-box .item-picture{
+      float: left;
+      width: 10vw;
+      height: auto;
+      margin: 3.5vw 0vw 0vw 3.5vw;
+      border-radius: 1.55vw;
+    }
+    #order-box .title{
+      float: left;
+      margin: 3.5vw 0vw 0vw 3.5vw;
+    }
+    #itempic + #itemtit{
+      margin: 3.5vw 0vw 0vw 1vw;
+    }
+    #order-box .price{
+      position: absolute;
+      top: 2vw;
+      right: 1vw;
+      font-weight: 600;
+    }
+    .thumb-rating{
+      float: left;
+      margin: 0vw 0vw 0vw 1vw;
+    }
+    #up.thumb-rating:active{
+      border: 2px dashed green;
+      border-radius: 1.5em;
+      padding: 0px 5px;
+    }
+    #down.thumb-rating:active{
+      border: 2px dashed #ff1025;
+      border-radius: 1.5em;
+      padding: 0px 5px;
+    }
+    .thumb-rating i.fa-thumbs-o-up, .thumb-rating i.fa-thumbs-o-down{
+      font-size: 1.2em;
+      margin: 0vw 0.5vw 0vw 0vw;
+    }
+    .thumb-rating i.fa-angle-up, .thumb-rating i.fa-angle-down{
+      font-size: 2em;
+      margin: 0vw 0vw 0vw 2.5vw;
+    }
+    .amount{
+      font-size: 1.2em;
+      display: inline-block;
+      width: 2.4em;
+      margin: 0vw;
+    }
+    #order-box .option-name{
+      margin: -2% 33% 0% 33%;
+      padding: 0px 5px;
+      width: 34%;
+    }
+
+    #order-box .option-form label{
+      margin: 3% 5%;
+    }
+    #order-bottom .cart-button{
+      padding: 9.5px 22px;
+      font-size: 0.8em;
+      position: relative;
+      top: 50%;
+
+      -webkit-transform: perspective(1px) translateY(-50%);
+        -moz-transform: perspective(1px) translateY(-50%);
+        -o-transform: perspective(1px) translateY(-50%);
+        -ms-transform: perspective(1px) translateY(-50%);
+        transform: perspective(1px) translateY(-50%);
+    }
+    #plus{
+      margin: 1% 0% 1% 1%;
+    }
+    #order-bottom .amount-btn{
+      height: 2.625vw;
+      width: 2.625vw;
+    }
+    
+    #order-bottom .amount-btn:hover, #order-bottom .cart-button:hover{
+      border-color: #00efda;
+      background-color: #00efda;
+      color: #fdfdfd;
+      opacity: 1;
+    }
+    #order-bottom .cart-button:active{
+      opacity: 0.6;
+    }
+    #order-bottom .amount-btn:active{
+      -webkit-transform: scale3d(0.9, 0.9, 1);
+    }
+    #order-bottom .amount-btn.inactive:hover, #order-bottom .cart-button.inactive:hover, #order-bottom .amount-btn.inactive:active, #order-bottom .cart-button.inactive:active{
+      border-color: #ccc;
+      background-color: transparent;
+      color: #ccc;
+      opacity: 0.6;
+      cursor: auto;
+    }
+    #order-bottom .numberOf{
+      padding: 7.5px 12px;
+      margin: 0.65% 0% 0% calc(5% + 2.625vw);
+    }
+  }
+
+  @media only screen and (max-device-width: 599px){
+    .pc{
+      display: none;
+    }
+    #order-box{
+      width: 90vw;
+      height: 75vh;
+      border-radius: 7vw;
+    }
+    #order-box .nav-icon{
+      top: 1.5vh;
+      left: 1.5vh;
+    }
+    #order-box .item-picture{
+      width: 50vw;
+      height: auto;
+      margin: 6vh 0vh 0vh 0vh;
+      border-radius: 1.55vw;
+    }
+    #itempic + #itemtit{
+      margin: 6vh 0vh 0vh 0vh;
+    }
+    #order-box .price{
+      display: inline-block;
+    }
+    .thumb-rating{
+      font-size: 1.35em;
+    }
+    #up{
+      float: right;
+      margin: 6vw 5vw 0vw 0vw;
+    }
+    #down{
+      float: left;
+      margin: 6vw 0vw 0vw 5vw;
+    }
+    #order-box .option-name{
+      margin: -3% 20% 0% 20%;
+      width: 60%;
+    }
+    #order-box .option-form label{
+      width: 70%;
+      margin: 3vw 30%;
+      text-align: initial;
+    }
+    
+    #order-bottom .cart-button{
+      font-size: 0.6em;
+      position: absolute;
+      top: 15%;
+      right: 3%;
+      height: 70%;
+      padding: 0px 22px;
+    }
+
+
+    #order-bottom .cart-button:active{
+      background: #fdfdfd;
+      color: black;
+    }
+
+    #order-bottom .amount-btn{
+      height: 70%;
+      width: 8%;
+      padding: 0px 1%;
+    }
+    #order-bottom .amount-btn.inactive:active{
+      -webkit-transform: scale3d(0.9, 0.9, 1);
+    }
+    #plus{
+      margin: 2% 0% 0% 1%;
+    }
+    #order-bottom .numberOf{
+      display: block;
+      width: 8%;
+      height: 75%;
+      line-height: 250%;
+      margin-top: 1%;
+      margin-left: 13%;
+    }
+  }
+
+
+/*Map*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+  
+  #map-page{
+    min-height: 100%;
+    width: 100%;
+    background: #121315;
+    display: none;
+  }
+
+  @media only screen and (min-device-width: 801px){
+    #map{
+      width: 38vw;
+      height: 38vw;
+      background: blue;
+      margin: 15% 31%;
+      border-radius: 3vw;
+      border: 2px solid #fdfdfd;
+    }
+  }
+  @media only screen and (max-device-width: 800px){}
+  @media only screen and (max-device-width: 599px){
+    #map{
+      width: 90vw;
+      height: 90vw;
+      background: blue;
+      margin: 30vh 5vw;
+      border-radius: 1em;
+      border: 2px solid #fdfdfd;
+    }
+  }
