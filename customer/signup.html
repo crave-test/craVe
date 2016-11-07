@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Chicken. Chicken. Chicken.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>craVe Sign Up</title>
+    <link rel="icon" type="image/png" href="../images/android-chrome-circle-192x192.png" sizes="192x192">
+    <!-- Page styles -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../loading.css">
+    
+    <script src="https://use.fontawesome.com/f69157360e.js"></script> <!--Font icons from fontawesome, has 605+ icons so use allot!! -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../code.js"></script>
+
+    <style>
+        html{
+            width: 100%;
+            height: 100%;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            font-family: Roboto !important;
+        }
+        body{
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }          
+        #header{
+            width: 100%;
+            min-height: 80px;
+            /*background-color: rgba(0,0,0,1.0);*/
+            background-color: transparent;
+            position: fixed;
+            top:0;
+            z-index: 2;
+            display: inline-block;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            -webkit-transition: .4s ease-in-out;
+            -ms-transition: .4s ease-in-out;
+            -moz-transition: .4s ease-in-out;
+            -o-transition: .4s ease-in-out;
+        }
+        @media only screen and (max-device-width: 1024px){
+            #header{min-height:10vh;}
+        }
+        .hover#header{
+            background: rgba(0,0,0,0.9);
+        }
+        .header-logo{
+            height:100%;
+            width: auto;
+            position:absolute;
+            left:3%;
+            background: rgba(0,0,0,0);
+            border-radius: 5em;
+        }
+        #header h4{
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+            -moz-osx-font-smoothing: grayscale;
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+        .hover#header h4{
+            color: #fdfdfd;
+        }
+        @media only screen and (max-device-width: 1024px){
+            #header h4{margin-left: 45%; margin-right: 55%;}
+        }
+        #back{
+            position:absolute;
+            right: 2%;
+            top: 25%;          
+
+            background:  transparent url('../images/back_black.png') no-repeat center;
+            border: solid 2px black;
+            padding: 10px;
+            
+            width: 15px;
+            height: 15px;
+            color: transparent;
+            cursor: pointer;
+
+            -webkit-border-radius: 10em;
+            -moz-border-radius: 10em;
+            border-radius: 10em;
+            
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            transition: all .5s;
+        }
+        #back:hover{
+            background: black url('../images/back_white.png') no-repeat center;
+        }
+        .hover#header #back{
+            border-color: #fdfdfd;
+            background: transparent url('../images/back_white.png') no-repeat center;
+        }
+        .hover#header #back:hover{
+            background: #fdfdfd url('../images/back_black.png') no-repeat center;
+        }
+        #page-1{
+            width: 100%;
+            min-height: 100%;
+            text-align: center;
+            background: #fdfdfd;
+        }
+        .btn{
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 2px solid #fdfdfd;
+            color: #fdfdfd;
+            padding: 12px 22px;
+            background: none;
+            border-radius: 24px;
+            cursor: pointer;
+            -webkit-transition: .2s ease-in-out;
+            -ms-transition: .2s ease-in-out;
+            -moz-transition: .2s ease-in-out;
+            -o-transition: .2s ease-in-out;
+        }
+        .btn:hover{
+            background: #fdfdfd;
+            color: black;
+        }
+        #fb{
+            font-size: .7em;
+            background: #3b5998; /*facebook color, i looked it up*/
+            border: none;
+            margin-top: 100px;
+            padding: 12px 90.5px;
+        }
+        #fb:hover{
+            color: #fdfdfd;
+            opacity: 0.8;
+        }
+        #goog{
+            font-size: .7em;
+            background: #db3236; /*google color, i looked it up*/
+            border: none;
+            padding: 12px 98.8px;
+        }
+        #goog:hover{
+            color: #fdfdfd;
+            opacity: 0.8;
+        }
+        @media only screen and (max-device-width: 1024px){
+            #fb{
+                margin-top: 13vh;
+                padding: 12px 88.5px;
+            }
+            #goog{
+                padding: 12px 96.5px;
+            }
+        }
+        @media only screen and (max-device-width: 374px){
+            #fb{
+                padding:12px 62.5px;
+                margin-top: 16vh;
+            }
+            #goog{
+                padding: 12px 70.6px;
+            }
+        }
+        .hline{
+            width: 100px;
+            height: 1px;
+            background: #ccc;
+            display: inline-block;
+            margin: 5px;
+            padding: 0;
+        }
+        #or{
+            font-size: 1.0em;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #121315;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        #email-prompt{
+            margin-top: 2vh;
+            font-size: 1.05em;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #121315;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        @media only screen and (max-device-width: 374px){
+            #or{font-size: .95em;}
+            #email-prompt{font-size:1em;}
+        }
+        #signup-form input[type="text"]{
+            width: 300.5px;
+            font-size: 0.9em;
+            border: 1px solid #ccc;
+            padding: 12px;
+        }
+        
+        #signup-form select{
+            width: 145px;
+            font-size: 0.9em;
+            border: 1px solid #ccc;
+            padding: 11px 12px;
+            color: #a9a9a9;
+        }
+        #signup-form select:invalid{color: #a9a9a9;}
+        #signup-form input[name="Day"]{width: 60px;margin: 2px;}
+        #signup-form input[name="Year"]{width: 60px;}
+        #signup-form input[type="radio"]{margin: 20px 15px;font-size: 0.9em;}
+        #signup-form span{
+            font-size: 0.9em;
+            color: #a9a9a9;
+        }
+        #signup-form a{
+            text-decoration: none;
+            color: #00efda;
+        }
+        #signup{
+            background-color: #00efda;
+            border: none;
+            color: #fdfdfd;
+            padding: 12px 146.65px;
+            margin: 1% 0% 1% 0%;
+            font-size: .7em;
+        }
+        #signup:hover{
+            color: #fdfdfd;
+            opacity: 0.6;
+        }
+        @media only screen and (max-device-width: 1024px){#signup{padding: 12px 144.5px;}}
+        @media only screen and (max-device-width: 374px){#signup{padding: 12px 118.6px;}}
+        @media only screen and (max-device-width: 374px){
+            #signup-form input[type="text"]{
+                font-size: .8em;
+                width: 250px;
+            }
+            #signup-form select{
+                width: 120px;
+                font-size: .8em;
+            }
+            #signup-form input[name="Day"]{width: 47px;margin: 2px;}
+            #signup-form input[name="Year"]{width: 47px;}
+        } 
+    </style>
+    <script>
+        $(document).ready(function(){
+            var t = $('#fb').offset().top - 99;
+            var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+            $(document).scroll(function(){
+                if($(this).scrollTop() > t) {   
+                    $('#header').addClass('hover');
+                } else {
+                    $('#header').removeClass('hover');
+                }
+            });
+            if(!isMobile){
+                $('#header').bind('mouseover', function () { $('#header').addClass('hover'); });
+                $('#header').bind('mouseout', function () { 
+                    if($(this).offset().top < t){
+                        $('#header').removeClass('hover'); 
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <header id="header">
+        <a href="../index.html"><img src="../images/logo_transparent_thick.png" class="header-logo"></a>
+        <h4>Customers</h4>
+        <a href="../index.html"><label id="back"></label></a>
+    </header>
+    <div id="page-1">
+        <button id="fb" class="btn">Sign Up With Facebook</button>
+        <br/><br/>
+        <button id="goog" class="btn">Sign Up With Google</button>
+        <br/><br/>
+        <div class="hline"></div>
+        <span id="or">or</span>
+        <div class="hline"></div>
+        <p id="email-prompt">Sign up with your email address</p>
+        <form action="#" id="signup-form">
+            <input required type="text" placeholder="First Name">
+            <br><br>
+            <input required type="text" placeholder="Last Name">
+            <br><br>
+            <input required type="text" placeholder="Email">
+            <br><br>
+            <input required type="text" placeholder="Confirm Email">
+            <br><br>
+            <select name="Month">
+                <option value="" disabled selected><span>Month</span></option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+            <input type="text" name="Day" placeholder="Day">
+            <input type="text" name="Year" placeholder="Year"><br>
+            <input type="radio" name="gender" value="male"><span>Male</span>
+            <input type="radio" name="gender" value="female"><span>Female</span>
+            <input type="radio" name="gender" value="other"><span>Other</span><br>
+            <input type="checkbox" name="share"><span style="font-size:0.85em;color:#a9a9a9;">Share my registration data with craVe's partners for marketing purposes.</span>
+            <br/><br/>
+            <p style="font-size:0.85em;padding:5px;">By clicking Sign up, you agree to <a href="#">craVe's terms & conditions</a> and <a href="#">privacy policy</a></p>
+            <button id = "signup" class="btn">Sign up</button>
+            <p style="margin: 1% 0% 2% 0%;">Already have an account? <a href="#">Log in</a></p>
+
+        </form>
+    </div>
+</body>
+</html>

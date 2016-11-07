@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Chicken. Chicken. Chicken.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>craVe Cart</title>
+    <link rel="icon" type="image/png" href="../images/android-chrome-circle-192x192.png" sizes="192x192">
+    <!-- Page styles -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../mdl/material.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../loading.css">
+    <script src="../mdl/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../code.js"></script>
+    <!--link rel="stylesheet" href="../mdl/material.indigo-pink.min.css"-->
+    <!-- old stylesheet for above: https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css -->
+    <!--link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"-->
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script-->
+	<style>
+		.demo-layout-transparent {
+			/*food court pic: other picture http://www.gannett-cdn.com/-mm-/c100366ae354e8d40c7088e92fef54e7eb8b8f8a/c=186-0-1683-842&r=x633&c=1200x630/local/-/media/DesMoines/2014/08/29/foodcourt2.jpg*/
+			/*macaroni grill pic: http://tjnisbet.com/wp-content/uploads/2010/05/DSC_0085.jpg*/
+			background: #121315 center / cover;
+		}
+		.demo-layout-transparent .mdl-layout__header,
+		.demo-layout-transparent .mdl-layout__drawer-button {
+			/* This background is dark, so we set text to white. Use 87% black instead if
+			   your background is light. */
+			color: white;
+		}
+	</style>
+    <style>
+		a:hover{
+			color:white
+		}
+		.nearby-card > .mdl-card__title{
+            border-bottom: solid #00efda;
+            height: 3vw;
+            padding-bottom: 0;
+        }
+        .nearby-card{
+            color:rgba(255, 255, 255, 0.3);
+        }
+        .nearby-card:hover{
+            color: white;
+        }
+        .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+        .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+        .material-icons.md-light { color: rgba(255, 255, 255, 1); }
+        .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+    </style>    
+	<script>$(document).ready(function() {setTimeout(function(){}, 500);});</script>
+</head>
+<body>
+
+<div style="background: #121315 center / cover;"class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header mdl-color--black">
+        <div style = "padding-left: 50px; padding-top: 10px" class="mdl-layout__header-row mdl-color--black">
+            <!-- Title -->
+            <a href = "../index.html"><span class="mdl-layout-title"><img src = "../images/logo_transparent.png" width = "128px" height = "72px"/></span></a>
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+                <label class="mdl-button mdl-js-button mdl-button--icon"
+                       for="fixed-header-drawer-exp">
+                    <i class="material-icons mdl-color-text--craVe">search</i>
+                </label>
+                <div class="mdl-textfield__expandable-holder">
+                    <input class="mdl-textfield__input" type="text" name="sample"
+                           id="fixed-header-drawer-exp">
+                </div>
+            </div>
+        </div>
+        <!-- Tabs -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--background">
+            <a href="#scroll-tab-1" class="mdl-layout__tab is-active"><i class="material-icons mdl-color-text--craVe">shopping_cart</i> Cart</a>
+        </div>
+    </header>
+
+    <div class="mdl-layout__drawer mdl-color--black">
+        <a style = "padding-left: 50px; padding-top: 7px" href = "../index.html"><span class="mdl-layout-title"><img src = "../images/logo_transparent.png" width = "128px" height = "72px"/></span></a>
+		<nav class="mdl-navigation">
+			<a class="mdl-navigation__link" href="browse.html"><i class="material-icons mdl-color-text--craVe">library_books</i><br/>Browse</a>
+			<a class="mdl-navigation__link" href="cart.html"><i class="material-icons mdl-color-text--craVe">shopping_cart</i><br/>Cart</a>
+			<a class="mdl-navigation__link" href="profile.html"><i class="material-icons mdl-color-text--craVe">account_box</i><br/>Profile</a>
+		</nav>
+    </div>
+	
+    <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+            <div class="page-content">
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div id="orders" class="nearby-card mdl-card mdl-shadow--4dp">
+                            <div class="mdl-card__title">
+                                <p>ORDERS</p>
+                            </div>
+                        </div>
+         
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div id="sales" class="nearby-card mdl-card mdl-shadow--4dp">
+                            <div class="mdl-card__title">
+                                <p>not too sure what this is supposed to look like</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div id="customers" class="nearby-card mdl-card mdl-shadow--4dp">
+                            <div class="mdl-card__title">
+                                <p>not too sure what this is supposed to look like</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div id="popularity" class="nearby-card mdl-card mdl-shadow--4dp">
+                            <div class="mdl-card__title">
+                                <p>not too sure what this is supposed to look like</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <script>
+                    
+                    $('#orders').height($('#orders').width()*.6);
+                    $('#sales').height($('#sales').width()*.6);
+                    $('#customers').height($('#customers').width()*.6);
+                    $('#popularity').height($('#popularity').width()*.6);
+                    $('#latestOrders').height($('#latestOrders').width()*.7);
+                    $('#items').height($('#items').width()*1.19);
+                    $('#activity').height($('#activity').width()*.88);
+                    
+                    </script>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="mdl-mega-footer mdl-color--black">
+            <div class="mdl-mega-footer__middle-section">
+
+                <div class="mdl-mega-footer__drop-down-section">
+                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                    <h1 class="mdl-mega-footer__heading">Features</h1>
+                    <ul class="mdl-mega-footer__link-list">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Updates</a></li>
+                    </ul>
+                </div>
+
+                <div class="mdl-mega-footer__drop-down-section">
+                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                    <h1 class="mdl-mega-footer__heading">Details</h1>
+                    <ul class="mdl-mega-footer__link-list">
+                        <li><a href="#">Specs</a></li>
+                        <li><a href="#">Tools</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+
+                <div class="mdl-mega-footer__drop-down-section">
+                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                    <h1 class="mdl-mega-footer__heading">Technology</h1>
+                    <ul class="mdl-mega-footer__link-list">
+                        <li><a href="#">How it works</a></li>
+                        <li><a href="#">Patterns</a></li>
+                        <li><a href="#">Usage</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Contracts</a></li>
+                    </ul>
+                </div>
+
+                <div class="mdl-mega-footer__drop-down-section">
+                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                    <h1 class="mdl-mega-footer__heading">FAQ</h1>
+                    <ul class="mdl-mega-footer__link-list">
+                        <li><a href="#">Questions</a></li>
+                        <li><a href="#">Answers</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="mdl-mega-footer__bottom-section">
+                <div class="mdl-logo mdl-color-text--craVe">craVe</div>
+                <ul class="mdl-mega-footer__link-list">
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Privacy & Terms</a></li>
+                </ul>
+            </div>
+
+        </footer>
+    </main>
+</div>
+</body>
+</html>
