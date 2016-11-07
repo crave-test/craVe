@@ -1,0 +1,96 @@
+
+.overlay{
+	position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: .6;
+    z-index: 499;
+    -webkit-transition: .01s ease-in-out;
+    -ms-transition: .01s ease-in-out;
+    -moz-transition: .01s ease-in-out;
+    -o-transition: .01s ease-in-out;
+}
+.side-section {
+    position: fixed;
+    top: 0;
+    right: -80%;
+    width: 80%;
+    height: 100%;
+    background: #121315;
+    z-index: 500;
+    box-shadow: -5px 0 5px -5px #000;
+    
+    -webkit-transition: .4s ease-in-out;
+    -ms-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+}
+.rollout.overlay{
+    -webkit-transform: translate(-100%,0);
+    -moz-transform: translate(-100%,0);
+    -o-transform: translate(-100%,0);
+    -ms-transform: translate(-100%,0);
+    transform: translate(-100%,0);
+}
+
+.rollout.side-section{
+    -webkit-transform: translate(-100%,0);
+    -moz-transform: translate(-100%,0);
+    -o-transform: translate(-100%,0);
+    -ms-transform: translate(-100%,0);
+    transform: translate(-100%,0);
+}
+
+.rollback.overlay{
+	 -webkit-transform: translate(100%,0);
+    -moz-transform: translate(100%,0);
+    -o-transform: translate(100%,0);
+    -ms-transform: translate(100%,0);
+    transform: translate(100%,0);
+}
+
+.rollback.side-section{
+	-webkit-transform: translate(100%,0);
+    -moz-transform: translate(100%,0);
+    -o-transform: translate(100%,0);
+    -ms-transform: translate(100%,0);
+    transform: translate(100%,0);
+                
+}
+
+#cover-photo{
+    background: blue;
+    width:100%;
+    height:40%;
+    top:0;
+    right:0;
+    position:relative;
+}
+#profile-photo{
+    background: green;
+    position: absolute;
+    width: 12%;
+    height: 10%;
+    border-radius: 50%;
+    left: 0%;
+    bottom: 0%;
+    margin: 2%;
+}
+
+
+@media only screen and (max-device-width: 1024px) {
+    .side-section{
+        width: 100%;
+        right: -100%;
+    }
+    #profile-photo{
+        width: 20%;
+        margin: 3%;
+    }
+    #cover-photo{
+        height: 30%;
+    }
+} 

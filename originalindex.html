@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>craVe</title>
+    <link rel="icon" type="image/png" href="images/android-chrome-circle-192x192.png" sizes="192x192">
+    <!-- Page styles -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="mdl/material.min.css">
+    <link rel="stylesheet" href="mdl/material.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="loading.css">
+    <script src="mdl/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="code.js"></script>
+    <!--link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css"-->
+    <style>
+        .demo-layout-transparent {
+            position: fixed;
+            left: 0;
+            right: 0;
+            background: url('images/restaurant-bw.jpg') center / cover;
+            z-index: 1;
+        }
+        .demo-layout-transparent .mdl-layout__header,
+        .demo-layout-transparent .mdl-layout__drawer-button {
+            /* This background is dark, so we set text to white. Use 87% black instead if
+               your background is light. */
+            color: white;
+        }
+        .outer{
+            width:100%;
+            text-align: center;
+        }
+        @media only screen and (min-device-width: 801px){.outer{margin-top: 30%;min-height: 25vw;}}
+        @media only screen and (max-device-width: 800px){.outer{margin-top: 80%;min-height: 100vw;}}
+        .inner{
+            display: inline-block
+        }
+    	a:hover{
+			color:white
+		}
+        .black-footer.mdl-mega-footer{background-color:black;z-index: 10;}
+        .black-footer > .mdl-mega-footer__middle-section{background-color:black;}
+        .black-footer > .mdl-mega-footer__drop-down-section{background-color:black;}
+        .black-footer > .mdl-mega-footer__bottom-section{background-color:black;}
+
+        #logo{
+            margin-left: 3.5%;
+        }
+        .input-bubble {
+          position:relative;
+          padding:17px;
+          margin-bottom: 1em;
+          border: solid 4px #00efda;
+          background: #00efda;
+          opacity: 0.6;
+          filter: alpha(opacity=60);
+          /*background: #fff;
+          opacity: 0.6;
+          filter: alpha(opacity=60);*/
+          /* css3 */
+          -webkit-border-radius:10px;
+          -moz-border-radius:10px;
+          border-radius:10px;
+        }
+    </style>
+	<script>
+        $(document).ready(function() {
+     
+            setTimeout(function(){
+                $('body').addClass('loaded');
+            }, 1500);
+            var state = 0;
+            $("#customer").click(function(){
+                $("#home").toggle();
+                $("#login-signup").toggle();
+                $("#back").toggle();
+                $("#logo").css('margin-left','0%');
+                $("#input-selector").attr("href", "customer/browse.html")
+                state = 1;
+            });
+            $("#restaurant").click(function(){
+                $("#home").toggle();
+                $("#login-signup").toggle();
+                $("#back").toggle();
+                $("#logo").css('margin-left','0%');
+                $("#input-selector").attr("href", "restaurant/dashboard.html")
+                state = 1;
+            });
+            $("#login").click(function(){
+                $("#login-signup").toggle();
+                $("#login-box").toggle();
+                //$(".demo-layout-transparent").css('background-image','url(images/restaurant-bw-blur.jpg)');
+                state = 2;
+            });
+            $("#back").click(function(){
+                if(state==2){
+                    $("#login-signup").toggle();
+                    $("#login-box").toggle();
+                    //$(".demo-layout-transparent").css('background-image','url(images/restaurant-bw.jpg)');
+                    state=1;
+                }else if(state==1){
+                    $("#home").toggle();
+                    $("#login-signup").toggle();
+                    $("#back").toggle();
+                    $("#logo").css('margin-left','3.5%');
+                }
+            });
+            $('input').bind("enterKey",function(e){
+               $('#login-input').trigger("click");
+            });
+            $('input').keyup(function(e){
+                if(e.keyCode == 13)
+                {
+                    $(this).trigger("enterKey");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="backdrop"></div>
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--black">
+            <div>
+                <!-- Title -->
+
+                <span class="mdl-layout-title">
+                    <label id="back" style="margin-left:1%;display:none" class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons mdl-color-text--craVe">arrow_back</i></label>
+                    <img id="logo" src = "images/logo_transparent.png" width = "128px" height = "72px"/>
+                </span>
+                
+            </div>
+                <!-- put div with login button in top right corner of header -->
+        </header>
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+        <div class = "outer">
+                <div id = "home" style="z-index:1;" class="inner">
+                    <button id="customer" style = "font-size: large" class="mdl-button mdl-js-button mdl-button--raised mdl-shadow--16dp mdl-js-ripple-effect mdl-button--accent">
+                        customer
+                    </button>
+                    <br/><br/>
+                    <!--a href = "restaurant/login_signup.html"--><button id="restaurant" style = "font-size: large" class="mdl-button mdl-js-button mdl-button--raised mdl-shadow--16dp mdl-js-ripple-effect mdl-button--colored">
+                        Restaurant
+                    </button></a>
+                    <br/><br/>
+                    <a href = "guest/guestbrowse.html"><button style = "font-size: large" class="mdl-button mdl-js-button mdl-button--raised mdl-shadow--16dp mdl-js-ripple-effect mdl-color--lime-600 mdl-color-text--white">
+                        Guest
+                    </button></a>
+                </div>
+                <div id="login-signup" style="display:none;z-index: 2;" class="inner">
+                    <button id="login" style = "font-size: large" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent ">Login</button></a>
+                    <br/><br/>
+                    <a href="#"><button id="signup" style = "font-size: large" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Sign Up</button>
+                </div>
+                <div id="login-box" style="display:none;z-index:3;" class="inner">
+                    <form action="#">
+                        <div class="input-bubble mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input style="font-weight:700;" class="mdl-textfield__input mdl-color-text--black" type="text" id="username">
+                            <label style="font-weight:700;" class="mdl-textfield__label mdl-color-text--black" for="username">Username...</label>
+                        </div>
+                    </form>
+                    <form action="#">
+                        <div class="input-bubble mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input style="font-weight:700;" class="mdl-textfield__input mdl-color-text--black" type="text" id="password">
+                            <label style="font-weight:700;" class="mdl-textfield__label mdl-color-text--black" for="password">Password...</label>
+                        </div>
+                    </form>
+                    
+                    <a id="input-selector" href="restaurant/dashboard.html"><button id="login-input" style = "font-size: large" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent ">Login</button></a>
+                    
+                </div>
+
+                <div style="position:absolute;top:15%;z-index:1;left:0;right:0;">
+                    <span style="border-radius:10%;background:#00efda;opacity:0.6;">
+                        <h1 style="color:transparent;font-family:Verdana, Helvetica, Arial, sans-serif;">Order Food. Get Rewards.</h1>
+                    </span>
+                </div>
+        </div>
+
+        <footer class="black-footer mdl-mega-footer mdl-color--black">
+            <div class="mdl-mega-footer__middle-section">
+
+                <div class="mdl-mega-footer__drop-down-section">
+                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                    <h1 class="mdl-mega-footer__heading">Features</h1>
+                    <ul class="mdl-mega-footer__link-list">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Updates</a></li>
+                    </ul>
+                </div>
+
+                <div class="mdl-mega-footer__drop-down-section">
+                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                    <h1 class="mdl-mega-footer__heading">Details</h1>
+                    <ul class="mdl-mega-footer__link-list">
+                        <li><a href="#">Specs</a></li>
+                        <li><a href="#">Tools</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+
+                <div class="mdl-mega-footer__drop-down-section">
+                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                    <h1 class="mdl-mega-footer__heading">Technology</h1>
+                    <ul class="mdl-mega-footer__link-list">
+                        <li><a href="#">How it works</a></li>
+                        <li><a href="#">Patterns</a></li>
+                        <li><a href="#">Usage</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Contracts</a></li>
+                    </ul>
+                </div>
+
+                <div class="mdl-mega-footer__drop-down-section">
+                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                    <h1 class="mdl-mega-footer__heading">FAQ</h1>
+                    <ul class="mdl-mega-footer__link-list">
+                        <li><a href="#">Questions</a></li>
+                        <li><a href="#">Answers</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="mdl-mega-footer__bottom-section">
+                <div class="mdl-logo mdl-color-text--craVe">craVe</div>
+                <ul class="mdl-mega-footer__link-list">
+                    <li><a  href="#">Help</a></li>
+                    <li><a href="#">Privacy & Terms</a></li>
+                </ul>
+            </div>
+
+        </footer>
+    </div>
+</body>
+
+
+</html>

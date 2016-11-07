@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Order food. Earn rewards.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>craVe</title>
+    <link rel="icon" type="image/png" href="images/android-chrome-circle-192x192.png" sizes="192x192">
+    <!-- Page styles -->
+    <!--link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="loading.css"> <!-- The cool loading bar we use is in this file -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="footer-distributed.css"> <!-- The footer we are using is made in this css file -->
+
+    <script src="https://use.fontawesome.com/f69157360e.js"></script> <!--Font icons from fontawesome, has 605+ icons so use allot!! -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="code.js"></script>
+    <script src="index.js"></script>
+
+    <!--style>
+    	html{font-family: Roboto !important;}
+    </style-->
+</head>
+<body>
+	<div id="loader-wrapper">
+        <div id="loader"></div>
+
+       <div class="loader-section section-left"></div>
+       <div class="loader-section section-right"></div>
+    </div>
+    <header class="header">
+    	<div id="nav-icon" class="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <img src="images/logo_transparent_thick.png" class="header-logo" id="header-logo">
+        <ul id="nav-bar">
+        	<li><a class="active" href="#">Users</a></li>
+        	<li><a href="#">Restaurants</a></li>
+        	<li><a href="#">Download</a></li>
+        	<li><a href="#">FAQ</a></li>
+        </ul>
+        <div class="mobile-nav">
+        	<ul>
+        		<li><a class="active" href="#">Users</a></li>
+	        	<li><a href="#">Restaurants</a></li>
+	        	<li><a href="#">Download</a></li>
+	        	<li><a href="#">FAQ</a></li>
+        	</ul>
+        </div>
+    </header>
+    <main id="page-1">
+    	<div id="container">
+    		<h1>Got a Food Craving?</h1>
+    		<h2>Order Food and Earn Rewards at restaurants near you.</h2><br><br>
+    		<button class="btn">Login</button>
+    		<button class="btn">Sign Up</button><br>
+    		<div class="hline"></div>
+        	<span id="or">or</span>
+        	<div class="hline"></div><br>
+        	<form action="#" id="signup-form">
+        		<button class='btn' id="location"><i class="fa fa-map-marker"></i></button>
+        		<input type="text" name="Address" placeholder="Enter your adress here...">
+        		<input type="submit" value="Find Food">
+        	</form>
+    	</div>
+    	<div style="position:absolute;bottom:0;height:45px;width:100%;text-align:center;">
+            <a href="#page-2"><div style="position:relative;" class="down hvr-grow">
+                  <div class="arrow-down"></div>
+            </div></a>
+        </div>
+    </main>
+
+    <section id="page-2">
+    	<h1>How it works</h1>
+    	<h2>Ordering Food and Earning Rewards were never so easy.</h2>
+    	<br><br>
+    	<div class="hline"></div>
+    	<h3>USERS</h3>
+    	<div class="hline"></div>
+    </section>
+    <footer class="footer-distributed">
+        <div class="footer-right">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-tumblr"></i></a>
+        </div>
+        <div class="footer-left">
+            <p class="footer-links">
+                <a href="#">About</a>
+                ·
+                <a href="#">Contact</a>
+                ·
+                <a href="#">Partners</a>
+                ·
+                <a href="#">Terms</a>
+                ·
+                <a href="#">Privacy</a>
+            </p>
+            <p><span style="color:#00efda;">craVe</span> &copy; 2016</p>
+        </div>
+    </footer>
+</body>
+</html>

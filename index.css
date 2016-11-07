@@ -1,0 +1,234 @@
+    
+    @import url(https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en);
+
+    @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+    
+    html{font-family: Roboto !important;}
+        #header-logo{
+            left:3%;
+        }
+        #nav-bar{
+            margin: 0px 2% 0px 0px;
+            padding: 0;
+            list-style-type: none;
+            float: right;
+        }
+        #nav-bar li{
+            display: inline-block;
+        }
+        #nav-bar li a{
+            padding: 30.5px 20px;
+            min-width: 100px;
+            text-align: center;
+            display: inline-block;
+
+            text-decoration: none;
+            font-weight: 500;
+            font-size: medium;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #fdfdfd;
+
+            -webkit-transition: .3s ease-in-out;
+            -ms-transition: .3s ease-in-out;
+            -moz-transition: .3s ease-in-out;
+            -o-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+        }
+        #nav-bar li .active{
+            color: #00efda;
+            font-weight: 700;
+        }
+        #nav-bar li a:hover{
+            background: rgba(255,255,255,0.3);
+        }
+/*Header Mobile Styles///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+        #nav-icon{
+            visibility: hidden;
+        }
+        @media only screen and (max-device-width: 801px){
+            #nav-icon{visibility: visible;}
+            #nav-bar{display: none;}
+            #header-logo{left: calc(35px + 3%);}
+        }
+/*Page-1 Styles/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+        #page-1{
+            width: 100%;
+            min-height: 100%;
+            position: relative;
+            text-align: center;
+            background: 
+                linear-gradient(
+                  rgba(0, 0, 0, 0.5),
+                  rgba(0, 0, 0, 0.5)
+                ),
+                url('images/foodpics/burger&fries.jpg') center / cover;
+        }
+        #container{
+            position: absolute;
+            top: 25%;
+            left: 0%;
+            right: 0%;
+            text-align: center;
+        }
+        #container h1{
+            color: #fdfdfd;
+            font-family: Roboto;
+            font-size: 3.5em;
+            letter-spacing: 1.5px;
+            margin: 0;
+        }
+        #container h2{
+            color: #fdfdfd;
+            font-family: Roboto;
+            font-weight: 400;
+            font-size: 1.7em;
+            margin: 2%;
+        }
+        #container button{
+            font-size: .72em;
+            width: 175px;
+            margin: 1% 13px;
+        }
+.hline{
+    width: 100px;
+    height: 1px;
+    background: #ccc;
+    display: inline-block;
+    margin: 5px;
+    padding: 0;
+}
+#or{
+    font-size: 1.15em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fdfdfd;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+#container #location{
+    font-size: 15px;
+    padding: 9px 17px 11px 17px;
+    width: auto;
+    border-radius: 24px 0px 0px 24px;
+    border-right: none;
+    margin-right: -5px;
+}
+#container #location:focus{outline: none;}
+#container input{
+    margin-top: 1%;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-size: .72em;
+    border: 2px solid #fdfdfd;]
+    color: #fdfdfd;
+    padding: 12px 22px;
+    background: none;
+}
+#container input[type='text']{
+    color: #fdfdfd;
+    border-right: none;
+    border-left: none;
+    margin-right: none;
+    margin-left: none;
+    width: 200px;
+}
+input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder{
+    color: #ccc !important;
+}
+#container input[type='text']:focus{outline: none;}
+#container input[type='submit']{
+    color: black;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 12px;
+    border-radius: 0px 24px 24px 0px;
+    border-left: none;
+    width: 100px;
+    cursor: pointer;
+    margin-left: -4px;
+
+    webkit-transition: 0.3s ease-in-out;
+}
+#container input[type='submit']:hover{
+    color: black;
+    background: #fdfdfd;
+    opacity: 1;
+}
+
+        .down{
+            position: relative;
+            height:45px;
+            width:90px;
+            border-radius: 90px 90px 0 0;
+            -moz-border-radius: 90px 90px 0 0;
+            -webkit-border-radius: 90px 90px 0 0;
+            background:white;
+            opacity: .6;
+            display: inline-block;
+            text-align: center;
+        }
+        .down.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+        .arrow-down {
+            border-right: 2px solid; 
+            border-bottom: 2px solid;
+            display: inline-block;
+            width: 33px; height: 33px;
+            transform: rotate(45deg);
+            color:black;
+        }
+@media only screen and (max-device-width: 801px){
+    #container{top: 35%;}
+    #container h1{font-size: 4em;margin-bottom:3%;}
+}
+@media only screen and (max-device-width: 410px){
+    #container{top: 22%;}
+    #container button{width: 150px;}
+    #container h1{font-size: 2.7em;}
+    #container h2{font-size: 1.3em;}
+    #container input[type='text']{width: 150px;}
+}
+@media only screen and (max-device-width: 321px){
+    #container{top: 15%;}
+    #container h1{font-size: 2.2em;}
+    #container h2{font-size: 1em;}
+    #container input[type='text']{width: 125px;}
+    #container input[type='submit']{width: 90px;}
+    #container button{font-size: .68em; width: 135px; margin: 1% 8px;}
+}
+/*Page-2 Styles//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#page-2{
+    width: 100%;
+    min-height: 100%;
+    background: #fdfdfd;
+    text-align: center;
+}
+#page-2 h1{
+    font-family: Roboto;
+    color: #222327;
+    font-size: 3em;
+    margin: 7% 0% 0% 0%;
+    padding: 0%;
+    display: inline-block;
+}
+#page-2 h3{
+    font-family: Roboto;
+    color: #222327;
+    font-size: 1.3em;
+    margin: 0%;
+    padding: 0%;
+    display: inline;
+
+}
+#page-2 h2{
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #222327;
+    margin: 1% 0% 0% 0%;
+    padding: 0%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
