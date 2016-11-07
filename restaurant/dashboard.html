@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Chicken. Chicken. Chicken.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link rel="icon" type="image/png" href="../images/android-chrome-circle-192x192.png" sizes="192x192">
+    <!-- Page styles -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../mdl/material.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../loading.css">
+    <script src="../mdl/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../code.js"></script>
+    <style>
+        .nearby-card > .mdl-card__title{
+            border-bottom: solid #00efda;
+            height: 3vw;
+            padding-bottom: 0;
+        }
+        .nearby-card{
+            color:rgba(255, 255, 255, 0.3);
+        }
+        .nearby-card:hover{
+            color: white;
+        }
+        .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+        .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+        .material-icons.md-light { color: rgba(255, 255, 255, 1); }
+        .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+    </style>
+    <script>
+        $(document).ready(function() {setTimeout(function(){}, 500);});
+    </script>
+</head>
+<body>
+
+<div style="background: #121315 center / cover;"class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header mdl-color--black">
+        <div style = "padding-left: 50px; padding-top: 10px" class="mdl-layout__header-row mdl-color--black">
+            <!-- Title -->
+            <a href = "../index.html"><span class="mdl-layout-title"><img src = "../images/logo_transparent.png" width = "128px" height = "72px"/></span></a>
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+                <label class="mdl-button mdl-js-button mdl-button--icon"
+                       for="fixed-header-drawer-exp">
+                    <i class="material-icons mdl-color-text--craVe">search</i>
+                </label>
+                <div class="mdl-textfield__expandable-holder">
+                    <input class="mdl-textfield__input" type="text" name="sample"
+                           id="fixed-header-drawer-exp">
+                </div>
+            </div>
+        </div>
+        <!-- Tabs -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--background">
+            <a href="#scroll-tab-1" class="mdl-layout__tab is-active"><i class="material-icons mdl-color-text--craVe">dashboard</i> Dashboard</a>
+        </div>
+    </header>
+
+    <div id="loader-wrapper">
+            <div id="loader"></div>
+
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+    </div>
+
+    <div class="mdl-layout__drawer mdl-color--black">
+        <a style = "padding-left: 50px; padding-top: 7px" href = "../index.html"><span class="mdl-layout-title"><img src = "../images/logo_transparent.png" width = "128px" height = "72px"/></span></a>
+        <nav class="mdl-navigation">
+            <a style="color:white;border-right: solid rgb(255,64,129);" class="mdl-navigation__link" href="dashboard.html"><i class="material-icons mdl-color-text--craVe">dashboard</i><br/>Dashboard</a>
+            <a class="mdl-navigation__link" href="restuarant/orders.html"><i class="material-icons mdl-color-text--craVe">shopping_cart</i><br/>Orders</a>
+            <a class="mdl-navigation__link" href="restuarant/orders.html"><i class="material-icons mdl-color-text--craVe">storage</i><br/>Data Tables</a>
+            <a class="mdl-navigation__link" href="restaurant/analytics.html"><i class="material-icons mdl-color-text--craVe">assessment</i><br/>Analytics</a>
+            <a class="mdl-navigation__link" href="restaurant/settings.html"><i class="material-icons mdl-color-text--craVe">settings</i><br/>Settings</a>
+            <a href="profile.html" class="mdl-navigation__link" href="restaurant/profile.html"><i class="material-icons mdl-color-text--craVe">account_box</i><br/>Profile</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+            <div class="page-content">
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+                        <div id="orders" class="nearby-card mdl-card mdl-shadow--4dp">
+                            <div class="mdl-card__title">
+                                <p>TOTAL ORDERS</p>
+                            </div>
+                            <div style="height:100%;width:50%"></div>
+                            <!--div style="height:100%;width:50%;background-color:#222327;">
+                                <i style="margin:auto;font-size:10vw;"class="material-icons">shopping_cart</i>
+                            </div>
+                            <div style="height:100%;width:50%;background-color:blue;margin-left:50%;margin-top:-48%;">
+                                <p style="margin:auto;font-size:5vw;">1.5K</p>
+                            </div-->
+                            <!--div style="background-color:#222327;height:100%;"class="mdl-card__media">
+                                <div style="margin-top:8%">
+                                    <i style="font-size:1000%;"class="material-icons">shopping_cart</i>
+                                </div>
+                                <div style="margin-top:-23%;margin-left:50%;">
+                                    <p style="font-size:670%">1.5K</p>
+                                </div>
+                            </div-->
+                        </div>
+                        
+                    </div>
+                    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+                        <div id="sales" class="nearby-card mdl-card mdl-shadow--4dp">
+                            <div class="mdl-card__title">
+                                <p>TOTAL SALES</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+                        <div id="customers" class="nearby-card mdl-card mdl-shadow--4dp">
+                            <div class="mdl-card__title">
+                                <p>TOTAL CUSTOMERS</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+                        <div id="popularity" class="nearby-card mdl-card mdl-shadow--4dp">
+                            <div class="mdl-card__title">
+                                <p>BRAND POPULARITY</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+                        <div id="latestOrders" class="nearby-card mdl-card mdl-shadow--4dp">
+                            <div class="mdl-card__title">
+                                <p>LATEST ORDERS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+                        <div id="items" class="nearby-card mdl-card mdl-shadow--4dp">
+                            <div class="mdl-card__title">
+                                <p>TOP ITEMS BY ORDERS</p> <!-- Include option to do by sales at top left corner eventually -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+                        <div id="activity" class="nearby-card mdl-card mdl-shadow--4dp">
+                            <div class="mdl-card__title">
+                                <p>RECENT ACTIVITY</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                    
+                    $('#orders').height($('#orders').width()*.6);
+                    $('#sales').height($('#sales').width()*.6);
+                    $('#customers').height($('#customers').width()*.6);
+                    $('#popularity').height($('#popularity').width()*.6);
+                    $('#latestOrders').height($('#latestOrders').width()*.7);
+                    $('#items').height($('#items').width()*1.19);
+                    $('#activity').height($('#activity').width()*.88);
+                    
+                    </script>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="mdl-mega-footer mdl-color--black">
+            <div class="mdl-mega-footer__middle-section">
+
+                <div class="mdl-mega-footer__drop-down-section">
+                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                    <h1 class="mdl-mega-footer__heading">Features</h1>
+                    <ul class="mdl-mega-footer__link-list">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Updates</a></li>
+                    </ul>
+                </div>
+
+                <div class="mdl-mega-footer__drop-down-section">
+                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                    <h1 class="mdl-mega-footer__heading">Details</h1>
+                    <ul class="mdl-mega-footer__link-list">
+                        <li><a href="#">Specs</a></li>
+                        <li><a href="#">Tools</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+
+                <div class="mdl-mega-footer__drop-down-section">
+                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                    <h1 class="mdl-mega-footer__heading">Technology</h1>
+                    <ul class="mdl-mega-footer__link-list">
+                        <li><a href="#">How it works</a></li>
+                        <li><a href="#">Patterns</a></li>
+                        <li><a href="#">Usage</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Contracts</a></li>
+                    </ul>
+                </div>
+
+                <div class="mdl-mega-footer__drop-down-section">
+                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                    <h1 class="mdl-mega-footer__heading">FAQ</h1>
+                    <ul class="mdl-mega-footer__link-list">
+                        <li><a href="#">Questions</a></li>
+                        <li><a href="#">Answers</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="mdl-mega-footer__bottom-section">
+                <div class="mdl-logo mdl-color-text--craVe">craVe</div>
+                <ul class="mdl-mega-footer__link-list">
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Privacy & Terms</a></li>
+                </ul>
+            </div>
+
+        </footer>
+    </main>
+</div>
+</body>
+</html>

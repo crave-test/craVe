@@ -1,0 +1,143 @@
+<!Doctype HTML>
+<html>
+	<head>
+		 <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="Profile" content="#">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Profile</title>
+	    <link rel="icon" type="image/png" href="../images/android-chrome-circle-192x192.png" sizes="192x192">
+	    <!-- Page styles -->
+	    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	    <link rel="stylesheet" href="../mdl/material.min.css">
+	    <link rel="stylesheet" href="../styles.css">
+	    <link rel="stylesheet" href="../loading.css">
+	    <script src="../mdl/material.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <script src="../code.js"></script>
+	    <link rel="stylesheet" href="../sideRoll.css">
+	    <style>
+	    </style>
+
+	    <script>
+        	$(document).ready(function() {
+        		setTimeout(function(){}, 500);
+                
+        	});
+    	</script>
+
+	</head>
+
+	<body>
+		<div id="loader-wrapper">
+            <div id="loader"></div>
+
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+    	</div>
+    	<div id="backfade" class="overlay active"></div>
+    	<div id="side-profile" class="side-section"></div>
+    	<div style="background: #121315 center / cover;"class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    		<header class="mdl-layout__header mdl-color--black">
+		        <div style = "padding-left: 50px; padding-top: 10px" class="mdl-layout__header-row mdl-color--black">
+		            <!-- Title -->
+		            <a id="logo" href = "../index.html"><span class="mdl-layout-title"><img src = "../images/logo_transparent.png" width = "128px" height = "72px"/></span></a>
+		            <div class="mdl-layout-spacer"></div>
+		            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+		                  mdl-textfield--floating-label mdl-textfield--align-right">
+		                <label class="mdl-button mdl-js-button mdl-button--icon"
+		                       for="fixed-header-drawer-exp">
+		                    <i class="material-icons mdl-color-text--craVe">search</i>
+		                </label>
+		                <div class="mdl-textfield__expandable-holder">
+		                    <input class="mdl-textfield__input" type="text" name="sample"
+		                           id="fixed-header-drawer-exp">
+		                </div>
+		            </div>
+		        </div>
+		        <!-- Tabs -->
+		        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--background">
+		            <a href="#scroll-tab-1" class="mdl-layout__tab is-active"><i class="material-icons mdl-color-text--craVe">account_box</i> Profile</a>
+		        </div>
+   			 </header>
+   			 <div class="mdl-layout__drawer mdl-color--black">
+		        <a style = "padding-left: 50px; padding-top: 7px" href = "../index.html"><span class="mdl-layout-title"><img src = "../images/logo_transparent.png" width = "128px" height = "72px"/></span></a>
+		        <nav class="mdl-navigation">
+		            <a class="mdl-navigation__link" href="dashboard.html"><i class="material-icons mdl-color-text--craVe">dashboard</i><br/>Dashboard</a>
+		            <a class="mdl-navigation__link" href="restuarant/orders.html"><i class="material-icons mdl-color-text--craVe">shopping_cart</i><br/>Orders</a>
+		            <a class="mdl-navigation__link" href="restuarant/orders.html"><i class="material-icons mdl-color-text--craVe">storage</i><br/>Data Tables</a>
+		            <a class="mdl-navigation__link" href="restaurant/analytics.html"><i class="material-icons mdl-color-text--craVe">assessment</i><br/>Analytics</a>
+		            <a class="mdl-navigation__link" href="restaurant/settings.html"><i class="material-icons mdl-color-text--craVe">settings</i><br/>Settings</a>
+		            <a style="color:white;border-right: solid rgb(255,64,129);" href="profile.html" class="mdl-navigation__link" href="restaurant/profile.html"><i class="material-icons mdl-color-text--craVe">account_box</i><br/>Profile</a>
+		        </nav>
+		    </div>
+
+		    <main class="mdl-layout__content">
+		        <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+		            <div class="page-content">
+		                
+		            </div>
+		        </section>
+		        
+		        <footer class="mdl-mega-footer mdl-color--black">
+		            <div class="mdl-mega-footer__middle-section">
+
+		                <div class="mdl-mega-footer__drop-down-section">
+		                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+		                    <h1 class="mdl-mega-footer__heading">Features</h1>
+		                    <ul class="mdl-mega-footer__link-list">
+		                        <li><a href="#">About</a></li>
+		                        <li><a href="#">Terms</a></li>
+		                        <li><a href="#">Partners</a></li>
+		                        <li><a href="#">Updates</a></li>
+		                    </ul>
+		                </div>
+
+		                <div class="mdl-mega-footer__drop-down-section">
+		                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+		                    <h1 class="mdl-mega-footer__heading">Details</h1>
+		                    <ul class="mdl-mega-footer__link-list">
+		                        <li><a href="#">Specs</a></li>
+		                        <li><a href="#">Tools</a></li>
+		                        <li><a href="#">Resources</a></li>
+		                    </ul>
+		                </div>
+
+		                <div class="mdl-mega-footer__drop-down-section">
+		                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+		                    <h1 class="mdl-mega-footer__heading">Technology</h1>
+		                    <ul class="mdl-mega-footer__link-list">
+		                        <li><a href="#">How it works</a></li>
+		                        <li><a href="#">Patterns</a></li>
+		                        <li><a href="#">Usage</a></li>
+		                        <li><a href="#">Products</a></li>
+		                        <li><a href="#">Contracts</a></li>
+		                    </ul>
+		                </div>
+
+		                <div class="mdl-mega-footer__drop-down-section">
+		                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+		                    <h1 class="mdl-mega-footer__heading">FAQ</h1>
+		                    <ul class="mdl-mega-footer__link-list">
+		                        <li><a href="#">Questions</a></li>
+		                        <li><a href="#">Answers</a></li>
+		                        <li><a href="#">Contact us</a></li>
+		                    </ul>
+		                </div>
+
+		            </div>
+
+		            <div class="mdl-mega-footer__bottom-section">
+		                <div class="mdl-logo mdl-color-text--craVe">craVe</div>
+		                <ul class="mdl-mega-footer__link-list">
+		                    <li><a href="#">Help</a></li>
+		                    <li><a href="#">Privacy & Terms</a></li>
+		                </ul>
+		            </div>
+
+		        </footer>
+		    </main>
+   		</div>
+	</body>
+</html>
